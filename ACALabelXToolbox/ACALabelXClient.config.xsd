@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="configuration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="system.runtime.remoting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="application">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="service">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="wellknown">
+                            <xs:complexType>
+                              <xs:attribute name="objectUri" type="xs:string" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="channels">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="channel">
+                            <xs:complexType>
+                              <xs:attribute name="address" type="xs:string" use="required" />
+                              <xs:attribute name="ref" type="xs:string" use="required" />
+                              <xs:attribute name="port" type="xs:unsignedShort" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="name" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="general-settings">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="machine-name" type="xs:string" />
+              <xs:element name="poll-frequency" type="xs:unsignedByte" />
+              <xs:element name="folders">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="PrintJobsRootFolder" type="xs:string" />
+                    <xs:element name="LabelDefinitionsRootFolder" type="xs:string" />
+                    <xs:element name="PaperDefinitionsRootFolder" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="print-groups">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" name="print-group">
+                      <xs:complexType mixed="true">
+                        <xs:sequence minOccurs="0">
+                          <xs:element maxOccurs="unbounded" name="printer">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element maxOccurs="unbounded" name="tray">
+                                  <xs:complexType>
+                                    <xs:attribute name="name" type="xs:string" use="required" />
+                                    <xs:attribute name="papertype" type="xs:string" use="required" />
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute name="name" type="xs:string" use="required" />
+                              <xs:attribute name="enabled" type="xs:boolean" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="name" type="xs:string" use="required" />
+                        <xs:attribute name="enabled" type="xs:boolean" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

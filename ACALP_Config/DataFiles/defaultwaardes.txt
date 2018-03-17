@@ -1,0 +1,31 @@
+@@ipnumberserver@@				het IPnummer van de server										(server)(client)
+@@portserver@@					het Poortnummer op de server waar hij luisterd naar de client."			(server)(client)
+@@printjobsrootfolder@@			C:\ACA\ACALabelPrint\Server PrintJobs									(server)
+@@labeldefinitionrootfolder@@	C:\ACA\ACALabelPrint\Server LabelDefinitions							(server)
+@@paperdefinitionsrootfolder@@	C:\ACA\ACALabelPrint\Server PaperDefinitions							(server)
+@@settingsrootfolder@@			C:\ACA\ACALabelPrint\Server Settings									(server)
+@@picturesrootfolder@@ 			C:\ACA\ACALabelPrint\Server Pictures									(server)
+@@updaterootfolder@@			C:\ACA\ACALabelPrint\Server Updates										(server)
+@@serverlogfile@@				C:\ACA\Logs\ACALabelPrintServerLogging.txt								(server)
+@@serverloglevel@@				56																		(server)
+@@serverlogappend@@				true																	(server)
+@@serverconfigxml@@				Vervangen door de plaats van het ACALabelXServer.config.xml bestand (incl deze naam)			(client)
+@@clientconfigxml@@				vervangen door de plaats van het acalabelxcleint.config.xml bestand (incl deze naam)			(client)
+@@identifyingname@@				vervangen door een unieke naam. Dit mag de machine naam zijn (als deze uniek is binnen de keten)	(client)
+@@clientpjrootfolder@@			C:\ACA\ACALabelPrint\Client PrintJobs
+@@clientldrootfolder@@      	C:\ACA\ACALabelPrint\Client LabelDefinitions
+@@clientpdrootfolder@@      	C:\ACA\ACALabelPrint\Client PaperDefinitions
+@@clientstrootfolder@@			C:\ACA\ACALabelPrint\Client Settings
+@@clientptrootfolder@@      	C:\ACA\ACALabelPrint\Client Pictures
+@@clientuprootfolder@@			C:\ACA\ACALabelPrint\Client Updates
+@@clientlogfile@@				C:\ACA\Logs\ACALabelPrintClientLogging.txt	
+@@clientlogappend@@				false	
+@@clientloglevel@@				56
+@@clientremip@@					ipnummer van de client, waarop hij luisterd naar controllers
+@@clientremport@@				poortnummer van de client, waarop hij luisterd naar controllers
+@@standaloneclient@@			false
+
+
+    <!--values are ALL, FATAL, ERROR, WARNING, SUCCESS, INFO DEBUG -->
+    <!--           0xFFFF, 32,  16       8       4        2    1   -->
+

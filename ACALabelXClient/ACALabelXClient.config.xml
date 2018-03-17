@@ -1,0 +1,37 @@
+<configuration>
+  <system.runtime.remoting>
+    <customErrors mode="off"/>
+    <application name="ACALabelXClient">
+      <service>
+        <wellknown mode="Singleton" type="ACA.LabelX.RemoteObject, ACALabelXRemoteObject" objectUri="ACALabelXRemoteObject" />
+      </service>
+      <channels>
+        <channel address="127.0.0.1" ref="http" port="18080">
+        <!--channel address="aca-re03" ref="http" port="18080" -->
+          <clientProviders>
+            <formatter ref="soap"/>
+          </clientProviders>
+        </channel>
+      </channels>
+    </application>
+  </system.runtime.remoting>
+  <general-settings>
+    <version>0.01</version>
+    <!-- Machine name: identifies a machine uniquely -->
+    <machine-name>Default</machine-name>
+    <!-- Poll frequency: poll frequency in seconds. -->
+    <poll-frequency>10</poll-frequency>
+    <folders>
+      <PrintJobsRootFolder>F:\ACA\ACALabelPrint\Client PrintJobs</PrintJobsRootFolder>
+      <LabelDefinitionsRootFolder>F:\ACA\ACALabelPrint\Client LabelDefinitions</LabelDefinitionsRootFolder>
+      <PaperDefinitionsRootFolder>F:\ACA\ACALabelPrint\Client PaperDefinitions</PaperDefinitionsRootFolder>
+      <SettingsRootFolder>F:\ACA\ACALabelPrint\Client Settings</SettingsRootFolder>
+      <PicturesRootFolder>F:\ACA\ACALabelPrint\Client Pictures</PicturesRootFolder>
+      <UpdateRootFolder>F:\ACA\ACALabelPrint\Client Updates</UpdateRootFolder>
+    </folders>
+    <printlanguage id="1043"/>
+    <standallone value="false"/>
+    <print-groups>      
+    </print-groups>
+  </general-settings>
+</configuration>

@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ADJUSTMENT" xml:space="preserve">
+    <value>Adjust:</value>
+  </data>
+  <data name="ALIGNTEXT" xml:space="preserve">
+    <value>Align Text:</value>
+  </data>
+  <data name="BOLD" xml:space="preserve">
+    <value>Bold</value>
+  </data>
+  <data name="CHARACTERLIMIT" xml:space="preserve">
+    <value>Character limit:</value>
+  </data>
+  <data name="CONCATMETHOD" xml:space="preserve">
+    <value>Concat Method:</value>
+  </data>
+  <data name="DATE" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="DECIMALFRACTION" xml:space="preserve">
+    <value>Decimal:Fraction</value>
+  </data>
+  <data name="DECIMALINTEGER" xml:space="preserve">
+    <value>Decimal:Integer</value>
+  </data>
+  <data name="DECIMALWHOLE" xml:space="preserve">
+    <value>Decimal:Whole</value>
+  </data>
+  <data name="FONT" xml:space="preserve">
+    <value>Font:</value>
+  </data>
+  <data name="FONTNAMEEXISTSERROR" xml:space="preserve">
+    <value>A font with this name already exists.</value>
+  </data>
+  <data name="FONTNAMEEXISTSERRORTITLE" xml:space="preserve">
+    <value>Font name already exists</value>
+  </data>
+  <data name="FONTNAMEQUESTION" xml:space="preserve">
+    <value>Please enter a name for this new font.</value>
+  </data>
+  <data name="FORMAT" xml:space="preserve">
+    <value>Format:</value>
+  </data>
+  <data name="GREYSCALE" xml:space="preserve">
+    <value>Greyscale</value>
+  </data>
+  <data name="HEIGHT" xml:space="preserve">
+    <value>Height:</value>
+  </data>
+  <data name="HORIZONTAL" xml:space="preserve">
+    <value>Horizontal</value>
+  </data>
+  <data name="INVALIDFONTNAME" xml:space="preserve">
+    <value>Invalid font name</value>
+  </data>
+  <data name="INVALIDINPUTERROR" xml:space="preserve">
+    <value>Invalid input: Please check your values.</value>
+  </data>
+  <data name="INVALIDINPUTERRORTITLE" xml:space="preserve">
+    <value>Invalid input</value>
+  </data>
+  <data name="INVERSED" xml:space="preserve">
+    <value>Inversed</value>
+  </data>
+  <data name="INVERTFONTQUESTION" xml:space="preserve">
+    <value>Do you want this font to be inverted?</value>
+  </data>
+  <data name="INVERTFONTQUESTIONTITLE" xml:space="preserve">
+    <value>Invert font</value>
+  </data>
+  <data name="ITALIC" xml:space="preserve">
+    <value>Italic</value>
+  </data>
+  <data name="KEEPRATIO" xml:space="preserve">
+    <value>Keep Ratio</value>
+  </data>
+  <data name="LEFT" xml:space="preserve">
+    <value>Left</value>
+  </data>
+  <data name="LINKEDFIELDS" xml:space="preserve">
+    <value>Linked fields:</value>
+  </data>
+  <data name="MILLIMETER" xml:space="preserve">
+    <value>Millimeter</value>
+  </data>
+  <data name="NORMAL" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="NOTHING" xml:space="preserve">
+    <value>Nothing</value>
+  </data>
+  <data name="REFERENCE" xml:space="preserve">
+    <value>Reference:</value>
+  </data>
+  <data name="RESIZESTYLE" xml:space="preserve">
+    <value>Resize Style:</value>
+  </data>
+  <data name="RIGHT" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="ROTATION" xml:space="preserve">
+    <value>Rotation:</value>
+  </data>
+  <data name="SAVEAS" xml:space="preserve">
+    <value>Save as...</value>
+  </data>
+  <data name="SELECTITEMTOEDIT" xml:space="preserve">
+    <value>Select item to edit:</value>
+  </data>
+  <data name="SHOWTEXT" xml:space="preserve">
+    <value>Show text</value>
+  </data>
+  <data name="STRETCH" xml:space="preserve">
+    <value>Stretch</value>
+  </data>
+  <data name="STRIKEOUT" xml:space="preserve">
+    <value>Strikeout</value>
+  </data>
+  <data name="TEXT" xml:space="preserve">
+    <value>Text</value>
+  </data>
+  <data name="TYPE" xml:space="preserve">
+    <value>Type:</value>
+  </data>
+  <data name="UNDERLINE" xml:space="preserve">
+    <value>Underline</value>
+  </data>
+  <data name="USEMANUALWIDTHHEIGHT" xml:space="preserve">
+    <value>Use manual width and height</value>
+  </data>
+  <data name="VERTICAL" xml:space="preserve">
+    <value>Vertical</value>
+  </data>
+  <data name="WIDTH" xml:space="preserve">
+    <value>Width:</value>
+  </data>
+  <data name="XPOSITION" xml:space="preserve">
+    <value>X Position:</value>
+  </data>
+  <data name="YPOSITION" xml:space="preserve">
+    <value>Y Position:</value>
+  </data>
+</root>

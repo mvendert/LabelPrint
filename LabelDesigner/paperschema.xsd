@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="paper">
+    <xs:complexType>
+      <xs:sequence>
+        
+        <xs:element name="coordinates">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="dpifactor">
+                <xs:complexType>
+                  <xs:attribute name="x" type="xs:int" use="required" />
+                  <xs:attribute name="y" type="xs:int" use="required" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="units" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        
+        <xs:element name="size">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="width">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:int">
+                      <xs:attribute name="units" type="xs:string" use="optional" />
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="height">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:int">
+                      <xs:attribute name="units" type="xs:string" use="optional" />
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        
+        <xs:element name="labelpos">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="horizontal" type="xs:int" />
+              <xs:element name="vertical" type="xs:int" />
+              <xs:element name="horzoffset">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:int">
+                      <xs:attribute name="units" type="xs:string" use="optional" />
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+
+              <xs:element name="vertoffset">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:int">
+                      <xs:attribute name="units" type="xs:string" use="optional" />
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+
+              <xs:element name="horzinterlabelgap">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:int">
+                      <xs:attribute name="units" type="xs:string" use="optional" />
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+
+              <xs:element name="vertinterlabelgap">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:int">
+                      <xs:attribute name="units" type="xs:string" use="optional" />
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>        
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        
+        <xs:element name="offsets">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="offset" maxOccurs="unbounded" >
+                <xs:complexType>
+                  <xs:attribute name="horzoffset" type="xs:int" use="required" />
+                  <xs:attribute name="vertoffset" type="xs:int" use="required" />
+                  <xs:attribute name="horzinterlabelgapdelta" type="xs:int" use="optional" />
+                  <xs:attribute name="vertinterlabeldelta" type="xs:int" use="optional" />
+                  <xs:attribute name="machine" type="xs:string" use="optional" />
+                  <xs:attribute name="printer" type="xs:string" use="optional" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      
+      <xs:attribute name="type" type="xs:string" use="required" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

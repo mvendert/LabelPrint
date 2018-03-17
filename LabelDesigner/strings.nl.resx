@@ -1,0 +1,501 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="PAPERTYPES" xml:space="preserve">
+    <value>Papiersoort</value>
+  </data>
+  <data name="FILE" xml:space="preserve">
+    <value>Bestand</value>
+  </data>
+  <data name="LABELS" xml:space="preserve">
+    <value>Etiketten</value>
+  </data>
+  <data name="EXIT" xml:space="preserve">
+    <value>Sluiten</value>
+  </data>
+  <data name="AVAILABLEITEMS" xml:space="preserve">
+    <value>Beschikbare velden:</value>
+  </data>
+  <data name="BARCODEFIELD" xml:space="preserve">
+    <value>Barcode</value>
+  </data>
+  <data name="CONCATFIELD" xml:space="preserve">
+    <value>Link Tekst</value>
+  </data>
+  <data name="FONTS" xml:space="preserve">
+    <value>Lettertypen</value>
+  </data>
+  <data name="IMAGEFIELD" xml:space="preserve">
+    <value>Afbeelding</value>
+  </data>
+  <data name="ITEMS" xml:space="preserve">
+    <value>Velden</value>
+  </data>
+  <data name="LABELDESIGNER" xml:space="preserve">
+    <value>Label Designer</value>
+  </data>
+  <data name="OPENPRINTJOB" xml:space="preserve">
+    <value>Open Afdruktaak</value>
+  </data>
+  <data name="PRINTPREVIEW" xml:space="preserve">
+    <value>Afdrukvoorbeeld</value>
+  </data>
+  <data name="SHOWBORDERS" xml:space="preserve">
+    <value>Laat randen zien</value>
+  </data>
+  <data name="TEXTFIELD" xml:space="preserve">
+    <value>Tekst</value>
+  </data>
+  <data name="USEDITEMS" xml:space="preserve">
+    <value>Gebruikte velden:</value>
+  </data>
+  <data name="ADD" xml:space="preserve">
+    <value>Toevoegen</value>
+  </data>
+  <data name="DELETE" xml:space="preserve">
+    <value>Verwijderen</value>
+  </data>
+  <data name="NEW" xml:space="preserve">
+    <value>Nieuw</value>
+  </data>
+  <data name="OPEN" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="SAVE" xml:space="preserve">
+    <value>Opslaan</value>
+  </data>
+  <data name="GREYSCALE" xml:space="preserve">
+    <value>Grijswaarden</value>
+  </data>
+  <data name="KEEPRATIO" xml:space="preserve">
+    <value>Behoud ratio</value>
+  </data>
+  <data name="NORMAL" xml:space="preserve">
+    <value>Normaal</value>
+  </data>
+  <data name="RESIZESTYLE" xml:space="preserve">
+    <value>Aanpassing:</value>
+  </data>
+  <data name="STRETCH" xml:space="preserve">
+    <value>Uitrekken</value>
+  </data>
+  <data name="ADDBARCODE" xml:space="preserve">
+    <value>Voeg Barcode Toe</value>
+  </data>
+  <data name="ADDCONCAT" xml:space="preserve">
+    <value>Voeg gelinkte tekst toe</value>
+  </data>
+  <data name="ADDEDTEXTFIELDS" xml:space="preserve">
+    <value>Toegevoegde velden:</value>
+  </data>
+  <data name="ADDFONT" xml:space="preserve">
+    <value>Nieuw</value>
+  </data>
+  <data name="ADDFORMAT" xml:space="preserve">
+    <value>Nieuw</value>
+  </data>
+  <data name="ADDIMAGE" xml:space="preserve">
+    <value>Voeg afbeelding toe</value>
+  </data>
+  <data name="ADDITEM" xml:space="preserve">
+    <value>Voeg veld toe</value>
+  </data>
+  <data name="ADDTEXTFIELD" xml:space="preserve">
+    <value>Voeg tekst toe</value>
+  </data>
+  <data name="ALIGNTEXT" xml:space="preserve">
+    <value>Uitlijning:</value>
+  </data>
+  <data name="AVAILABLETEXTFIELDS" xml:space="preserve">
+    <value>Beschikbare velden:</value>
+  </data>
+  <data name="CHARACTERLIMIT" xml:space="preserve">
+    <value>Tekenlimiet:</value>
+  </data>
+  <data name="CONCATMETHOD" xml:space="preserve">
+    <value>Link methode:</value>
+  </data>
+  <data name="DATE" xml:space="preserve">
+    <value>Datum</value>
+  </data>
+  <data name="DECIMALFRACTION" xml:space="preserve">
+    <value>Decimaal:Na de komma</value>
+  </data>
+  <data name="DECIMALINTEGER" xml:space="preserve">
+    <value>Decimaal:Voor de komma</value>
+  </data>
+  <data name="DECIMALWHOLE" xml:space="preserve">
+    <value>Decimaal:Volledig</value>
+  </data>
+  <data name="DONE" xml:space="preserve">
+    <value>Ok</value>
+  </data>
+  <data name="FONT" xml:space="preserve">
+    <value>Lettertype:</value>
+  </data>
+  <data name="FORMAT" xml:space="preserve">
+    <value>Formaat:</value>
+  </data>
+  <data name="HEIGHT" xml:space="preserve">
+    <value>Hoogte:</value>
+  </data>
+  <data name="HORIZONTAL" xml:space="preserve">
+    <value>Horizontaal</value>
+  </data>
+  <data name="ID" xml:space="preserve">
+    <value>ID:</value>
+  </data>
+  <data name="LANGUAGE" xml:space="preserve">
+    <value>Taal:</value>
+  </data>
+  <data name="LEFT" xml:space="preserve">
+    <value>Links</value>
+  </data>
+  <data name="REFERENCE" xml:space="preserve">
+    <value>Referentie:</value>
+  </data>
+  <data name="RIGHT" xml:space="preserve">
+    <value>Rechts</value>
+  </data>
+  <data name="ROTATION" xml:space="preserve">
+    <value>Rotatie:</value>
+  </data>
+  <data name="SHOWTEXT" xml:space="preserve">
+    <value>Laat tekst zien</value>
+  </data>
+  <data name="TEXT" xml:space="preserve">
+    <value>Tekst</value>
+  </data>
+  <data name="TYPE" xml:space="preserve">
+    <value>Type:</value>
+  </data>
+  <data name="USECHARACTERLIMIT" xml:space="preserve">
+    <value>Gebruik tekenlimiet</value>
+  </data>
+  <data name="USEMANUALWIDTHANDHEIGHT" xml:space="preserve">
+    <value>Gebruik eigen hoogte en breedte</value>
+  </data>
+  <data name="VALUE" xml:space="preserve">
+    <value>Waarde:</value>
+  </data>
+  <data name="VERTICAL" xml:space="preserve">
+    <value>Verticaal</value>
+  </data>
+  <data name="WIDTH" xml:space="preserve">
+    <value>Breedte:</value>
+  </data>
+  <data name="XPOSITION" xml:space="preserve">
+    <value>X Positie:</value>
+  </data>
+  <data name="YPOSITION" xml:space="preserve">
+    <value>Y Positie:</value>
+  </data>
+  <data name="BOLD" xml:space="preserve">
+    <value>Vet</value>
+  </data>
+  <data name="INVERSED" xml:space="preserve">
+    <value>Invers</value>
+  </data>
+  <data name="ITALIC" xml:space="preserve">
+    <value>Cursief</value>
+  </data>
+  <data name="STRIKEOUT" xml:space="preserve">
+    <value>Doorhaald</value>
+  </data>
+  <data name="UNDERLINE" xml:space="preserve">
+    <value>Onderlijnd</value>
+  </data>
+  <data name="DECIMAL" xml:space="preserve">
+    <value>Decimaal</value>
+  </data>
+  <data name="FORMATSTRINGNAMEQUESTION" xml:space="preserve">
+    <value>Gelieve het nieuwe formaat in te geven.</value>
+  </data>
+  <data name="INVALIDFORMATSTRING" xml:space="preserve">
+    <value>Ongeldige invoer</value>
+  </data>
+  <data name="INVALIDINPUTERROR" xml:space="preserve">
+    <value>Ongeldige invoer. Gelieve uw waarden na te kijken.</value>
+  </data>
+  <data name="INVALIDINPUTERRORTITLE" xml:space="preserve">
+    <value>Ongeldige invoer</value>
+  </data>
+  <data name="MILLIMETER" xml:space="preserve">
+    <value>Millimeter</value>
+  </data>
+  <data name="DEFAULT" xml:space="preserve">
+    <value>Standaard</value>
+  </data>
+  <data name="ITEMNAMEEXISTSERROR" xml:space="preserve">
+    <value>Er staat al een veld op dit label met de naam </value>
+  </data>
+  <data name="NEEDTWOTEXTFIELDSERROR" xml:space="preserve">
+    <value>U hebt minstens twee tekstvelden nodig om ze te kunnen koppelen.</value>
+  </data>
+  <data name="NEEDTWOTEXTFIELDSERRORTITLE" xml:space="preserve">
+    <value>Koppelingsfout</value>
+  </data>
+  <data name="AVAILABLEPAPERTYPES" xml:space="preserve">
+    <value>Beschikbare papier types:</value>
+  </data>
+  <data name="CREATENEWLABELDEFINITION" xml:space="preserve">
+    <value>Label</value>
+  </data>
+  <data name="CREATENEWPAPERDEFINITION" xml:space="preserve">
+    <value>Papier type</value>
+  </data>
+  <data name="DPI" xml:space="preserve">
+    <value>DPI:</value>
+  </data>
+  <data name="HORZINTERLBLGAP2" xml:space="preserve">
+    <value>Horizontaal:</value>
+  </data>
+  <data name="HORZOFFSET" xml:space="preserve">
+    <value>Horizontale rand afstand:</value>
+  </data>
+  <data name="NUMBERHORZLBLS" xml:space="preserve">
+    <value># Horizontale Labels:</value>
+  </data>
+  <data name="NUMBERHORZLBLS2" xml:space="preserve">
+    <value>Horizontaal:</value>
+  </data>
+  <data name="NUMBERVERTLBLS" xml:space="preserve">
+    <value># Verticale Labels:</value>
+  </data>
+  <data name="NUMBERVERTLBLS2" xml:space="preserve">
+    <value>Verticaal:</value>
+  </data>
+  <data name="PROPERTIES" xml:space="preserve">
+    <value>Eigenschappen:</value>
+  </data>
+  <data name="SETPAPERASDEFAULT" xml:space="preserve">
+    <value>Zet papier type als standaard</value>
+  </data>
+  <data name="SIZE" xml:space="preserve">
+    <value>Papier Grootte:</value>
+  </data>
+  <data name="SUPPORTEDPAPERTYPES" xml:space="preserve">
+    <value>Ondersteunde papier types:</value>
+  </data>
+  <data name="UNIT" xml:space="preserve">
+    <value>Eenheid:</value>
+  </data>
+  <data name="VERTINTERLBLGAP" xml:space="preserve">
+    <value>Verticale tussenruimte:</value>
+  </data>
+  <data name="VERTINTERLBLGAP2" xml:space="preserve">
+    <value>Verticaal:</value>
+  </data>
+  <data name="VERTOFFSET" xml:space="preserve">
+    <value>Verticale rand afstand:</value>
+  </data>
+  <data name="CURRENTOFFSETS" xml:space="preserve">
+    <value>Huidige Specifieke Uitlijningen:</value>
+  </data>
+  <data name="GENERALTAB" xml:space="preserve">
+    <value>Algemeen</value>
+  </data>
+  <data name="SPECIFICOFFSETTAB" xml:space="preserve">
+    <value>Specifieke Uitlijningen</value>
+  </data>
+  <data name="SELECTANITEMFIRSTERROR" xml:space="preserve">
+    <value>Selecteer eerst een veld.</value>
+  </data>
+  <data name="CLIENTNAME" xml:space="preserve">
+    <value>Client Naam:</value>
+  </data>
+  <data name="PRINTERNAME" xml:space="preserve">
+    <value>Printer Naam:</value>
+  </data>
+  <data name="CURRENTLABEL" xml:space="preserve">
+    <value>Huidig label:</value>
+  </data>
+  <data name="NOTHING" xml:space="preserve">
+    <value>Geen</value>
+  </data>
+  <data name="FONTNAMEEXISTSERROR" xml:space="preserve">
+    <value>Er bestaat al een lettertype met deze naam.</value>
+  </data>
+  <data name="FONTNAMEEXISTSERRORTITLE" xml:space="preserve">
+    <value>Lettertype naam bestaat al</value>
+  </data>
+  <data name="FONTNAMEQUESTION" xml:space="preserve">
+    <value>Gelieve een naam op te geven voor dit nieuwe lettertype.</value>
+  </data>
+  <data name="INVERTFONTQUESTION" xml:space="preserve">
+    <value>Wilt u dat dit een geïnverteerd lettertype word?</value>
+  </data>
+  <data name="INVERTFONTQUESTIONTITLE" xml:space="preserve">
+    <value>Lettertype inverteren</value>
+  </data>
+  <data name="LOADDEFAULT" xml:space="preserve">
+    <value>Laad standaard label</value>
+  </data>
+  <data name="LOADEXISTING" xml:space="preserve">
+    <value>Laad bestaand label</value>
+  </data>
+  <data name="LOADLABELFORM" xml:space="preserve">
+    <value>Open Label</value>
+  </data>
+  <data name="LOADTEXT" xml:space="preserve">
+    <value>Gelieve te selecteren welk label u wilt gebruiken bij deze prinjob.</value>
+  </data>
+  <data name="NEWLABEL" xml:space="preserve">
+    <value>Maak nieuw label</value>
+  </data>
+  <data name="HIDEBORDERS" xml:space="preserve">
+    <value>Verberg randen</value>
+  </data>
+  <data name="LOADLABELERROR" xml:space="preserve">
+    <value>Fout in het laden van het label. Gelieve te controleren of de label compatibel is.</value>
+  </data>
+  <data name="LOADLABELERRORTITLE" xml:space="preserve">
+    <value>Fout in het laden van het label</value>
+  </data>
+  <data name="SELECT" xml:space="preserve">
+    <value>Selecteer</value>
+  </data>
+  <data name="TODELETE" xml:space="preserve">
+    <value>om te verwijderen:</value>
+  </data>
+  <data name="SELECTPAPERDEFFORM" xml:space="preserve">
+    <value>Selecteer papiersoort om te gebruiken:</value>
+  </data>
+  <data name="EDIT" xml:space="preserve">
+    <value>Bewerk</value>
+  </data>
+  <data name="SELECTFONTTOEDIT" xml:space="preserve">
+    <value>Selecteer font om te bewerken:</value>
+  </data>
+  <data name="SELECTITEMTOEDIT" xml:space="preserve">
+    <value>Selecteer een item om te bewerken:</value>
+  </data>
+  <data name="SELECTPAPERTOEDIT" xml:space="preserve">
+    <value>Selecteer papier type om te bewerken:</value>
+  </data>
+  <data name="SAVEAS" xml:space="preserve">
+    <value>Opslaan als...</value>
+  </data>
+  <data name="SAVELABEL" xml:space="preserve">
+    <value>Slaag etiket op</value>
+  </data>
+  <data name="SAVELABELAS" xml:space="preserve">
+    <value>Slaag etiket op als...</value>
+  </data>
+</root>

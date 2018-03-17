@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="labeldef">
+    <xs:complexType>
+      <xs:sequence>
+        
+        <xs:element name="validpapertypes">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="paper">
+                <xs:complexType>
+                  <xs:attribute name="type" type="xs:string" use="required" />
+                  <xs:attribute name="default" type="xs:boolean" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+
+        <xs:element name="coordinates">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="dpifactor">
+                <xs:complexType>
+                  <xs:attribute name="x" type="xs:int" use="required" />
+                  <xs:attribute name="y" type="xs:int" use="required" />
+                </xs:complexType>
+              </xs:element>
+			        <xs:element name="units" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+
+        <xs:element name="definition">
+          <xs:complexType>
+            <xs:sequence>
+
+              <xs:element name="fonts">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" name="font">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="typeface" type="xs:string" />
+                          <xs:element name="size" type="xs:decimal" />
+                          <xs:element name="inverseprint" type="xs:boolean" />
+                          <xs:element minOccurs="0" maxOccurs="1" name="style" type="xs:string" />
+                        </xs:sequence>
+                        <xs:attribute name="id" type="xs:string" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              
+              <xs:element name="fields">
+                <xs:complexType>
+                  <xs:choice minOccurs="0" maxOccurs="unbounded">
+                    
+                    <xs:element name="barcodefield" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="barcode">
+                            <xs:complexType>
+                              <xs:attribute name="type" type="xs:string" use="required" />
+                              <xs:attribute name="maxcharcount" type="xs:int" use="required" />
+                              <xs:attribute name="printtext" type="xs:string" use="optional" />
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="horzpos" type="xs:decimal" />
+                          <xs:element name="vertpos" type="xs:decimal" />
+                          <xs:element name="width" type="xs:int" />
+                          <xs:element name="height" type="xs:int" />
+                          <xs:element name="rotation" type="xs:int" />
+                          <xs:element name="printformat">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="format">
+                                  <xs:complexType>
+                                    <xs:attribute name="type" type="xs:string" use="required" />
+                                    <xs:attribute name="align" type="xs:string" use="required" />
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="id" type="xs:string" use="required" />
+                        <xs:attribute name="valueref" type="xs:string" use="optional" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="imagefield" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="horzpos" type="xs:decimal" />
+                          <xs:element name="vertpos" type="xs:decimal" />
+                          <xs:element name="width" type="xs:int" minOccurs="0" maxOccurs="1"/>
+                          <xs:element name="height" type="xs:int" minOccurs="0" maxOccurs="1"/>
+                          <xs:element name="rotation" type="xs:int" />
+                          <xs:element name="imagestyle">
+                            <xs:complexType>
+                              <xs:attribute name="style" type="xs:string" use="required" />
+                              <xs:attribute name="keepratio" type="xs:boolean" use="required" />
+                              <xs:attribute name="colorstyle" type="xs:string" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="id" type="xs:string" use="required" />
+                        <xs:attribute name="valueref" type="xs:string" use="optional" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="textfield" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="fontref">
+                            <xs:complexType>
+                              <xs:attribute name="id" type="xs:string" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="horzpos" type="xs:decimal" />
+                          <xs:element name="vertpos" type="xs:decimal" />
+                          <xs:element name="width" type="xs:int" minOccurs="0" maxOccurs="1"/>
+                          <xs:element name="height" type="xs:int" minOccurs="0" maxOccurs="1"/>
+                          <xs:element name="rotation" type="xs:int" />
+                          <xs:element name="printformat">
+                            <xs:complexType>
+                              <xs:all>
+                                <xs:element name="format">
+                                  <xs:complexType>
+                                    <xs:attribute name="type" type="xs:string" use="required" />
+                                    <xs:attribute name="macro" type="xs:string" use="optional" />
+                                    <xs:attribute name="align" type="xs:string" use="required" />
+                                    <xs:attribute name="format" type="xs:string" use="optional" />
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:all>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="id" type="xs:string" use="required" />
+                        <xs:attribute name="valueref" type="xs:string" use="optional" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="textconcat" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="horzpos" type="xs:decimal" />
+                          <xs:element name="vertpos" type="xs:decimal" />
+                          <xs:element name="printformat">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="format">
+                                  <xs:complexType>
+                                    <xs:attribute name="type" type="xs:string" use="required" />
+                                    <xs:attribute name="align" type="xs:string" use="required" />
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="width" type="xs:int" minOccurs="0" maxOccurs="1"/>
+                          <xs:element name="height" type="xs:int" minOccurs="0" maxOccurs="1"/>                          
+                          <xs:element name="rotation" type="xs:int" />
+                          <xs:element name="concatMethod" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                          <xs:element name="fontref">
+                            <xs:complexType>
+                              <xs:attribute name="id" type="xs:string" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                          
+                          <xs:element name="internalfields">
+                            <xs:complexType>
+                              <xs:sequence>
+                                
+                                <xs:element minOccurs="2" maxOccurs="unbounded" name="textfield">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="fontref">
+                                        <xs:complexType>
+                                          <xs:attribute name="id" type="xs:string" use="required" />
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="printformat">
+                                        <xs:complexType>
+                                          <xs:all>
+                                            <xs:element name="format">
+                                              <xs:complexType>
+                                                <xs:attribute name="type" type="xs:string" use="required" />
+                                                <xs:attribute name="macro" type="xs:string" use="optional" />
+                                                <xs:attribute name="align" type="xs:string" use="required" />
+                                                <xs:attribute name="format" type="xs:string" use="optional" />
+                                              </xs:complexType>
+                                            </xs:element>
+                                          </xs:all>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="id" type="xs:string" use="required" />
+                                    <xs:attribute name="valueref" type="xs:string" use="optional" />
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="id" type="xs:string" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:choice>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        
+        <xs:element name="label">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="options">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="quantity" type="xs:int" />
+                    <xs:element name="cultureinfos">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="cultureinfo">
+                            <xs:complexType>
+                              <xs:attribute name="language" type="xs:string" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="values">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="value">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="key" type="xs:string" use="required" />
+                            <xs:attribute name="type" type="xs:string" use="required" />
+                            <xs:attribute name="language" type="xs:int" use="required" />
+                            <xs:attribute name="contents" type="xs:string" use="optional" />
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="type" type="xs:string" use="required" />
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="lua" type="xs:string" maxOccurs="1" minOccurs="0"/>  
+        
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:string" use="required" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,519 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="RELEASED" xml:space="preserve">
+    <value>Released</value>
+  </data>
+  <data name="THEREARECURRENTLYNOPRINTERSINTHISPOOLUSERIGHTCLICKTOADDAPRINTERTOTHEPOOL" xml:space="preserve">
+    <value>There are currently no printers in this pool. Use right-click to add a printer to the pool.</value>
+  </data>
+  <data name="ATTENTION" xml:space="preserve">
+    <value>Attention!</value>
+  </data>
+  <data name="ABOUT" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="LABELPRINTCOMMANDER" xml:space="preserve">
+    <value>LabelPrint Commander</value>
+  </data>
+  <data name="PROTOCOL" xml:space="preserve">
+    <value>Protocol</value>
+  </data>
+  <data name="PAPERTYPE" xml:space="preserve">
+    <value>Papertype</value>
+  </data>
+  <data name="CONNECTTONETWORKPRINTSERVER" xml:space="preserve">
+    <value>Connect to network printserver</value>
+  </data>
+  <data name="REFRESH" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="JOBS" xml:space="preserve">
+    <value>Jobs</value>
+  </data>
+  <data name="ONLYSELECTONEPRINTERPOOL" xml:space="preserve">
+    <value>Only select one printerpool!</value>
+  </data>
+  <data name="TRAY" xml:space="preserve">
+    <value>Tray</value>
+  </data>
+  <data name="QUICKPAPERCHANGE" xml:space="preserve">
+    <value>Quick Paper Change</value>
+  </data>
+  <data name="REMOVEPRINTERFROMPOOL" xml:space="preserve">
+    <value>Remove printer from pool</value>
+  </data>
+  <data name="WARNING" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="CONNECTIONLOST" xml:space="preserve">
+    <value>Connection lost...</value>
+  </data>
+  <data name="ADDPRINTERSTOPOOL" xml:space="preserve">
+    <value>Add printer(s) to pool...</value>
+  </data>
+  <data name="LABELDATA" xml:space="preserve">
+    <value>Label Data</value>
+  </data>
+  <data name="NOPRINTERPOOLDEFINEDUSESTANDARDMANAGEMENTTODEFINE" xml:space="preserve">
+    <value>No printer pool defined. Use standard management to define!</value>
+  </data>
+  <data name="DISCARDSELECTEDPRINTJOB" xml:space="preserve">
+    <value>Discard selected printjob</value>
+  </data>
+  <data name="CANCEL" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="PRINTGROUP" xml:space="preserve">
+    <value>Printgroup</value>
+  </data>
+  <data name="SELECTAPRINTERPOOLFIRST" xml:space="preserve">
+    <value>Select a printerpool first!</value>
+  </data>
+  <data name="PRINTJOBS" xml:space="preserve">
+    <value>Printjobs</value>
+  </data>
+  <data name="DISCARDJOB" xml:space="preserve">
+    <value>Discard Job</value>
+  </data>
+  <data name="SELECTAPRINTER" xml:space="preserve">
+    <value>Select a printer</value>
+  </data>
+  <data name="MANAGEPRINTER1" xml:space="preserve">
+    <value>Manage printer...</value>
+  </data>
+  <data name="MANAGE" xml:space="preserve">
+    <value>Manage</value>
+  </data>
+  <data name="PAPERTYPES" xml:space="preserve">
+    <value>Papertypes</value>
+  </data>
+  <data name="DETAILS" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="SELECTATRAYINTHELISTOFTRAYSFIRST" xml:space="preserve">
+    <value>Select a tray in the list of trays first</value>
+  </data>
+  <data name="CONNECTIONPARAMETERS" xml:space="preserve">
+    <value>Connection Parameters</value>
+  </data>
+  <data name="CLOSE1" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="PRINTERPOOL" xml:space="preserve">
+    <value>Printer Pool</value>
+  </data>
+  <data name="FOLLOWINGPRINTERSCOULDNOTBEREMOVEDFROMPRINTSERVICE0" xml:space="preserve">
+    <value>Following printers could not be removed from printservice: {0}</value>
+  </data>
+  <data name="THEREARECURRENTLYNOPRINTJOBSTOHANDLEMAYBETHEYAREALREADYASSIGNEDTOAPRINTER" xml:space="preserve">
+    <value>There are currently no printjobs to handle. Maybe they are already assigned to a printer?</value>
+  </data>
+  <data name="PRINTERS" xml:space="preserve">
+    <value>Printers</value>
+  </data>
+  <data name="ENABLED" xml:space="preserve">
+    <value>Enabled</value>
+  </data>
+  <data name="ENABLEPRINTER" xml:space="preserve">
+    <value>Enable Printer</value>
+  </data>
+  <data name="DISABLEPRINTGROUP" xml:space="preserve">
+    <value>Disable Printgroup</value>
+  </data>
+  <data name="SUSPENDPRINTJOB" xml:space="preserve">
+    <value>Suspend printjob</value>
+  </data>
+  <data name="COMPUTER" xml:space="preserve">
+    <value>Computer</value>
+  </data>
+  <data name="QUERYINGPRINTSERVER" xml:space="preserve">
+    <value>Querying Printserver</value>
+  </data>
+  <data name="PREVIEWPRINTJOBFAILEDTRYAGAINLATER[INUSE]" xml:space="preserve">
+    <value>Preview printjob failed. Try again later. [In Use]</value>
+  </data>
+  <data name="LABELTYPE" xml:space="preserve">
+    <value>Labeltype</value>
+  </data>
+  <data name="ADDNEWPRINTERPOOL" xml:space="preserve">
+    <value>Add new printer pool</value>
+  </data>
+  <data name="FILE" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="SELECTONLYONETRAY" xml:space="preserve">
+    <value>Select only one tray.</value>
+  </data>
+  <data name="CLOSE" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="LABELS" xml:space="preserve">
+    <value>Labels</value>
+  </data>
+  <data name="UNABLETOAVAILABLEPAPERTYPESFROMPRINTERSERVICE" xml:space="preserve">
+    <value>Unable to available papertypes from printerservice.</value>
+  </data>
+  <data name="GIVEAORGANISATIONWIDEUNIQUENAMEFORYOURPRINTERPOOL" xml:space="preserve">
+    <value>Give a organisationwide unique name for your printerpool:</value>
+  </data>
+  <data name="LIST" xml:space="preserve">
+    <value>List</value>
+  </data>
+  <data name="HOLD" xml:space="preserve">
+    <value>Hold</value>
+  </data>
+  <data name="MANAGEAPRINTERPOOL" xml:space="preserve">
+    <value>Manage a printerpool</value>
+  </data>
+  <data name="STATUS" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="SELECTONLYONEPRINTERINTHELISTOFPRINTERS" xml:space="preserve">
+    <value>Select only one printer in the list of printers.</value>
+  </data>
+  <data name="DISABLED" xml:space="preserve">
+    <value>Disabled</value>
+  </data>
+  <data name="REMOVESELECTEDPRINTERFROMPOOL" xml:space="preserve">
+    <value>Remove selected printer from pool</value>
+  </data>
+  <data name="DOUBLECLICKONAPRINTER" xml:space="preserve">
+    <value>Double Click on a printer...</value>
+  </data>
+  <data name="ADDPRINTERTOPOOL" xml:space="preserve">
+    <value>Add printer to pool</value>
+  </data>
+  <data name="PRINTJOB" xml:space="preserve">
+    <value>Printjob</value>
+  </data>
+  <data name="PRINTERSWILLBEREMOVEDFROMPRINTERPOOL" xml:space="preserve">
+    <value>Printers will be removed from printer pool </value>
+  </data>
+  <data name="REMOVESELECTEDTRAY" xml:space="preserve">
+    <value>Remove selected tray</value>
+  </data>
+  <data name="HELP" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="PORT" xml:space="preserve">
+    <value>Port</value>
+  </data>
+  <data name="ABOUT0" xml:space="preserve">
+    <value>About {0}</value>
+  </data>
+  <data name="ICONS" xml:space="preserve">
+    <value>Icons</value>
+  </data>
+  <data name="MANAGEPRINTER" xml:space="preserve">
+    <value>Manage Printer</value>
+  </data>
+  <data name="PREVIEWXMLLABELS" xml:space="preserve">
+    <value>Preview XML labels</value>
+  </data>
+  <data name="PRINTER" xml:space="preserve">
+    <value>Printer</value>
+  </data>
+  <data name="SUSPENDSELECTEDPRINTJOB" xml:space="preserve">
+    <value>Suspend selected printjob</value>
+  </data>
+  <data name="NOPRINTERPOOLDEFINEDUSERIGHTCLICKTODEFINEAPRINTERPOOL" xml:space="preserve">
+    <value>No printer pool defined. Use right-click to define a printer pool.</value>
+  </data>
+  <data name="REMOVEPRINTERPOOL" xml:space="preserve">
+    <value>Remove printer pool</value>
+  </data>
+  <data name="CHANGESELECTED" xml:space="preserve">
+    <value>Change selected</value>
+  </data>
+  <data name="NEWPRINTERPOOL" xml:space="preserve">
+    <value>New Printerpool</value>
+  </data>
+  <data name="POOL" xml:space="preserve">
+    <value>Pool</value>
+  </data>
+  <data name="VERSION0" xml:space="preserve">
+    <value>Version {0}</value>
+  </data>
+  <data name="SELECTANEXISTINGPRINTJOB" xml:space="preserve">
+    <value>Select an existing printjob</value>
+  </data>
+  <data name="ONLYFIRST1000LINES" xml:space="preserve">
+    <value>(Only first 1000 lines)</value>
+  </data>
+  <data name="VIEW" xml:space="preserve">
+    <value>View</value>
+  </data>
+  <data name="BY" xml:space="preserve">
+    <value>By</value>
+  </data>
+  <data name="TILE" xml:space="preserve">
+    <value>Tile</value>
+  </data>
+  <data name="CHANGESCOULDNOTBESTOREDBYPRINTERSERVICE" xml:space="preserve">
+    <value>Changes could not be stored by printerservice.</value>
+  </data>
+  <data name="RELEASEPRINTJOB" xml:space="preserve">
+    <value>Release printjob</value>
+  </data>
+  <data name="NAME" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="CLICKONAPRINTERTOCHANGEITSPAPERTYPE" xml:space="preserve">
+    <value>Click on a printer to change it\'s papertype</value>
+  </data>
+  <data name="PROCEED" xml:space="preserve">
+    <value>. Proceed?</value>
+  </data>
+  <data name="CREATED" xml:space="preserve">
+    <value>Created</value>
+  </data>
+  <data name="PRINTERCOULDNOTBEADDEDONPRINTSERVICE" xml:space="preserve">
+    <value>Printer could not be added on printservice.</value>
+  </data>
+  <data name="NOSELECTION" xml:space="preserve">
+    <value>No selection</value>
+  </data>
+  <data name="NUMBEROFPRINTERS" xml:space="preserve">
+    <value>Number of printers</value>
+  </data>
+  <data name="DISCARDINGPRINTJOBFAILEDTRYAGAINLATER[INUSE]" xml:space="preserve">
+    <value>Discarding printjob failed. Try again later. [In Use]</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="ADDTRAY" xml:space="preserve">
+    <value>Add tray</value>
+  </data>
+  <data name="ENABLEPRINTGROUP" xml:space="preserve">
+    <value>Enable Printgroup</value>
+  </data>
+  <data name="PRINTERNAME" xml:space="preserve">
+    <value>Printer Name</value>
+  </data>
+  <data name="UNABLETORETRIEVETRAYSFORTHISPRINTER" xml:space="preserve">
+    <value>Unable to retrieve trays for this printer</value>
+  </data>
+  <data name="FROM" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="DISABLEPRINTER" xml:space="preserve">
+    <value>Disable Printer</value>
+  </data>
+  <data name="EXIT" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="PAPER" xml:space="preserve">
+    <value>Paper</value>
+  </data>
+  <data name="LARGEICONS" xml:space="preserve">
+    <value>Large Icons</value>
+  </data>
+  <data name="CALLTOPRINTERSERVICEFAILEDCHECKYOURCONNECTION" xml:space="preserve">
+    <value>Call to printer service failed. Check your connection.</value>
+  </data>
+  <data name="MANAGETRAYSANDPAPERTYPES" xml:space="preserve">
+    <value>Manage Trays and Papertypes</value>
+  </data>
+  <data name="SELECTAPRINTERINTHELISTOFPRINTERSFIRST" xml:space="preserve">
+    <value>Select a printer in the list of printers first.</value>
+  </data>
+  <data name="VIEWSELECTEDPRINTJOB" xml:space="preserve">
+    <value>View selected printjob...</value>
+  </data>
+  <data name="DEFAULT" xml:space="preserve">
+    <value>default</value>
+  </data>
+  <data name="MANAGEAPRINTERTRAY" xml:space="preserve">
+    <value>Manage a Printer Tray</value>
+  </data>
+  <data name="CPYRIGHT" xml:space="preserve">
+    <value>A single, powerful product for all your labeling needs! ACA LabelPrint allows you to create great looking Labels.  ACA Labelprint, the enterprise solution for client-based label printing and centralized system management.</value>
+  </data>
+  <data name="DESCRIPTION" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="NO" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="OPTIONS" xml:space="preserve">
+    <value>Options</value>
+  </data>
+  <data name="PRINTCOMMANDERMAINFORMTITLE" xml:space="preserve">
+    <value>Manage the printing of labels</value>
+  </data>
+  <data name="PRINTGROUPWILLBEREMOVED" xml:space="preserve">
+    <value>Are you sure you want to remove this printgroup?</value>
+  </data>
+  <data name="YES" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="GRAPHICALVIEW" xml:space="preserve">
+    <value>Example</value>
+  </data>
+  <data name="XMLVIEW" xml:space="preserve">
+    <value>XML</value>
+  </data>
+  <data name="AVAILABLEITEMS" xml:space="preserve">
+    <value>Available items:</value>
+  </data>
+  <data name="BARCODEFIELD" xml:space="preserve">
+    <value>Barcode</value>
+  </data>
+  <data name="CONCATFIELD" xml:space="preserve">
+    <value>Link Text</value>
+  </data>
+  <data name="CURRENTLABEL" xml:space="preserve">
+    <value>Current label:</value>
+  </data>
+  <data name="FONTS" xml:space="preserve">
+    <value>Fonts</value>
+  </data>
+  <data name="IMAGEFIELD" xml:space="preserve">
+    <value>Image</value>
+  </data>
+  <data name="ITEMS" xml:space="preserve">
+    <value>Items</value>
+  </data>
+  <data name="LABELDESIGNER" xml:space="preserve">
+    <value>Label Designer</value>
+  </data>
+  <data name="OPENPRINTJOB" xml:space="preserve">
+    <value>Open Printjob</value>
+  </data>
+  <data name="PRINTPREVIEW" xml:space="preserve">
+    <value>Print Preview</value>
+  </data>
+  <data name="SHOWBORDERS" xml:space="preserve">
+    <value>Show Border</value>
+  </data>
+  <data name="TEXTFIELD" xml:space="preserve">
+    <value>Text</value>
+  </data>
+  <data name="USEDITEMS" xml:space="preserve">
+    <value>Used items:</value>
+  </data>
+  <data name="LASTPRINTED" xml:space="preserve">
+    <value>Last Printed</value>
+  </data>
+  <data name="PRINTEDTO" xml:space="preserve">
+    <value>Printed to</value>
+  </data>
+</root>

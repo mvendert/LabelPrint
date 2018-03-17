@@ -1,0 +1,519 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="RELEASED" xml:space="preserve">
+    <value>Vrijgegeven</value>
+  </data>
+  <data name="THEREARECURRENTLYNOPRINTERSINTHISPOOLUSERIGHTCLICKTOADDAPRINTERTOTHEPOOL" xml:space="preserve">
+    <value>Er zijn momenteel geen printers is de groep. Gebruik right-klik om een printer toe te voegen in de groep.</value>
+  </data>
+  <data name="ATTENTION" xml:space="preserve">
+    <value>Opgelet!</value>
+  </data>
+  <data name="ABOUT" xml:space="preserve">
+    <value>Over</value>
+  </data>
+  <data name="LABELPRINTCOMMANDER" xml:space="preserve">
+    <value>LabelPrint Commander</value>
+  </data>
+  <data name="PROTOCOL" xml:space="preserve">
+    <value>Protocol</value>
+  </data>
+  <data name="PAPERTYPE" xml:space="preserve">
+    <value>Papiertype</value>
+  </data>
+  <data name="CONNECTTONETWORKPRINTSERVER" xml:space="preserve">
+    <value>Verbind met een netwerk printserver</value>
+  </data>
+  <data name="REFRESH" xml:space="preserve">
+    <value>Ververs</value>
+  </data>
+  <data name="ONLYSELECTONEPRINTERPOOL" xml:space="preserve">
+    <value>Selecteer precies 1 printgroep</value>
+  </data>
+  <data name="TRAY" xml:space="preserve">
+    <value>Lade</value>
+  </data>
+  <data name="QUICKPAPERCHANGE" xml:space="preserve">
+    <value>Snel papiersoort wisselen</value>
+  </data>
+  <data name="WARNING" xml:space="preserve">
+    <value>Waarschuwing</value>
+  </data>
+  <data name="CONNECTIONLOST" xml:space="preserve">
+    <value>Verbinding verloren...</value>
+  </data>
+  <data name="LABELDATA" xml:space="preserve">
+    <value>Etiket gegevens</value>
+  </data>
+  <data name="NOPRINTERPOOLDEFINEDUSESTANDARDMANAGEMENTTODEFINE" xml:space="preserve">
+    <value>Geen printgroep aangemaakt. Gebruik het beheerstuk van de toepassing.</value>
+  </data>
+  <data name="CANCEL" xml:space="preserve">
+    <value>Annuleren</value>
+  </data>
+  <data name="PRINTGROUP" xml:space="preserve">
+    <value>Printgroep</value>
+  </data>
+  <data name="SELECTAPRINTER" xml:space="preserve">
+    <value>Selecteer een printer</value>
+  </data>
+  <data name="SELECTAPRINTERPOOLFIRST" xml:space="preserve">
+    <value>Selecteer eerst een printgroep!</value>
+  </data>
+  <data name="JOBS" xml:space="preserve">
+    <value>Taken</value>
+  </data>
+  <data name="MANAGE" xml:space="preserve">
+    <value>Beheren</value>
+  </data>
+  <data name="PAPERTYPES" xml:space="preserve">
+    <value>Papiersoort</value>
+  </data>
+  <data name="DETAILS" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="SELECTATRAYINTHELISTOFTRAYSFIRST" xml:space="preserve">
+    <value>Selecteer een lade uit de lijst van mogelijke lades.</value>
+  </data>
+  <data name="CONNECTIONPARAMETERS" xml:space="preserve">
+    <value>Verbindings instellingen</value>
+  </data>
+  <data name="CLOSE1" xml:space="preserve">
+    <value>Sluiten</value>
+  </data>
+  <data name="PRINTERPOOL" xml:space="preserve">
+    <value>Printergroep</value>
+  </data>
+  <data name="FOLLOWINGPRINTERSCOULDNOTBEREMOVEDFROMPRINTSERVICE0" xml:space="preserve">
+    <value>Volgende printers kunnen niet verwijder worden van de printservice: {0}</value>
+  </data>
+  <data name="THEREARECURRENTLYNOPRINTJOBSTOHANDLEMAYBETHEYAREALREADYASSIGNEDTOAPRINTER" xml:space="preserve">
+    <value>Er staan geen printtaken in de wachtrij. Alle taken zijn vrijgegeven naar de printer.</value>
+  </data>
+  <data name="PRINTERS" xml:space="preserve">
+    <value>Printers</value>
+  </data>
+  <data name="ENABLED" xml:space="preserve">
+    <value>Geactiveerd</value>
+  </data>
+  <data name="ENABLEPRINTER" xml:space="preserve">
+    <value>Activeer printer</value>
+  </data>
+  <data name="DISABLEPRINTGROUP" xml:space="preserve">
+    <value>Deactiveer print groep</value>
+  </data>
+  <data name="COMPUTER" xml:space="preserve">
+    <value>Computer</value>
+  </data>
+  <data name="QUERYINGPRINTSERVER" xml:space="preserve">
+    <value>Vraag aan printserver.</value>
+  </data>
+  <data name="LABELTYPE" xml:space="preserve">
+    <value>Etiketsoort</value>
+  </data>
+  <data name="ADDNEWPRINTERPOOL" xml:space="preserve">
+    <value>Voeg nieuwe printgroep toe</value>
+  </data>
+  <data name="FILE" xml:space="preserve">
+    <value>Bestand</value>
+  </data>
+  <data name="SELECTONLYONETRAY" xml:space="preserve">
+    <value>Selecteer precies 1 lade.</value>
+  </data>
+  <data name="CLOSE" xml:space="preserve">
+    <value>Sluiten</value>
+  </data>
+  <data name="LABELS" xml:space="preserve">
+    <value>Etiketten</value>
+  </data>
+  <data name="PREVIEWXMLLABELS" xml:space="preserve">
+    <value>Bekijk etiketten in XML formaat.</value>
+  </data>
+  <data name="GIVEAORGANISATIONWIDEUNIQUENAMEFORYOURPRINTERPOOL" xml:space="preserve">
+    <value>Geef een organisatiebreede unieke naam voor de printergroep:</value>
+  </data>
+  <data name="LIST" xml:space="preserve">
+    <value>Lijst</value>
+  </data>
+  <data name="HOLD" xml:space="preserve">
+    <value>Vasthouden</value>
+  </data>
+  <data name="STATUS" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="SELECTONLYONEPRINTERINTHELISTOFPRINTERS" xml:space="preserve">
+    <value>Selecteer precies 1 printer uit de lijst.</value>
+  </data>
+  <data name="DISABLED" xml:space="preserve">
+    <value>Gedeactiveerd</value>
+  </data>
+  <data name="DOUBLECLICKONAPRINTER" xml:space="preserve">
+    <value>Dubbelklik op een printer</value>
+  </data>
+  <data name="PRINTJOB" xml:space="preserve">
+    <value>Afdruktaak</value>
+  </data>
+  <data name="PRINTERSWILLBEREMOVEDFROMPRINTERPOOL" xml:space="preserve">
+    <value>Printers zullen verwijderd worden van de printgroep.</value>
+  </data>
+  <data name="REMOVESELECTEDTRAY" xml:space="preserve">
+    <value>Verwijder lade</value>
+  </data>
+  <data name="MANAGEAPRINTERTRAY" xml:space="preserve">
+    <value>Beheer een printer lade</value>
+  </data>
+  <data name="HELP" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="UNABLETOAVAILABLEPAPERTYPESFROMPRINTERSERVICE" xml:space="preserve">
+    <value>Niet gelukt om de papiertypes op te halen bij de printserver</value>
+  </data>
+  <data name="PORT" xml:space="preserve">
+    <value>Poort</value>
+  </data>
+  <data name="ICONS" xml:space="preserve">
+    <value>Icons</value>
+  </data>
+  <data name="PRINTER" xml:space="preserve">
+    <value>Printer</value>
+  </data>
+  <data name="NOPRINTERPOOLDEFINEDUSERIGHTCLICKTODEFINEAPRINTERPOOL" xml:space="preserve">
+    <value>Geen printgroep aangemaakt. Rechts-klik om een printgroep aan te maken.</value>
+  </data>
+  <data name="REMOVEPRINTERPOOL" xml:space="preserve">
+    <value>Verwijder printgroep</value>
+  </data>
+  <data name="CLICKONAPRINTERTOCHANGEITSPAPERTYPE" xml:space="preserve">
+    <value>Klik op een printer om de papiersoort te wijzigen</value>
+  </data>
+  <data name="CHANGESELECTED" xml:space="preserve">
+    <value>Wijzigen</value>
+  </data>
+  <data name="PROCEED" xml:space="preserve">
+    <value>. Verder gaan?</value>
+  </data>
+  <data name="NEWPRINTERPOOL" xml:space="preserve">
+    <value>Nieuwe printgroep</value>
+  </data>
+  <data name="MANAGEAPRINTERPOOL" xml:space="preserve">
+    <value>Beheer een printgroep</value>
+  </data>
+  <data name="POOL" xml:space="preserve">
+    <value>Groep</value>
+  </data>
+  <data name="SELECTANEXISTINGPRINTJOB" xml:space="preserve">
+    <value>Selecteer een bestaande afdruktaak</value>
+  </data>
+  <data name="ONLYFIRST1000LINES" xml:space="preserve">
+    <value>(Alleen de eerste 1000 regels)</value>
+  </data>
+  <data name="VIEW" xml:space="preserve">
+    <value>Bekijk</value>
+  </data>
+  <data name="BY" xml:space="preserve">
+    <value>Door</value>
+  </data>
+  <data name="CHANGESCOULDNOTBESTOREDBYPRINTERSERVICE" xml:space="preserve">
+    <value>Wijzigingen kunnen niet worden opgeslagen door printserver.</value>
+  </data>
+  <data name="RELEASEPRINTJOB" xml:space="preserve">
+    <value>Geef afdruktaak vrij</value>
+  </data>
+  <data name="NAME" xml:space="preserve">
+    <value>Naam</value>
+  </data>
+  <data name="PREVIEWPRINTJOBFAILEDTRYAGAINLATER[INUSE]" xml:space="preserve">
+    <value>Belijken printjob mislukt. Probeer later opnieuw.</value>
+  </data>
+  <data name="DEFAULT" xml:space="preserve">
+    <value>standaard</value>
+  </data>
+  <data name="CREATED" xml:space="preserve">
+    <value>Gemaakt op</value>
+  </data>
+  <data name="PRINTERCOULDNOTBEADDEDONPRINTSERVICE" xml:space="preserve">
+    <value>Printer kan niet toegevoegd worden aan printserver.</value>
+  </data>
+  <data name="NOSELECTION" xml:space="preserve">
+    <value>Geen selectie.</value>
+  </data>
+  <data name="NUMBEROFPRINTERS" xml:space="preserve">
+    <value>Aantal printers</value>
+  </data>
+  <data name="DISCARDINGPRINTJOBFAILEDTRYAGAINLATER[INUSE]" xml:space="preserve">
+    <value>Verwijderen printjob mislukt. Probeer later opnieuw. [In gebruik]</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="ADDTRAY" xml:space="preserve">
+    <value>Voeg lade toe</value>
+  </data>
+  <data name="ENABLEPRINTGROUP" xml:space="preserve">
+    <value>Activeer print groep</value>
+  </data>
+  <data name="UNABLETORETRIEVETRAYSFORTHISPRINTER" xml:space="preserve">
+    <value>Niet gelukt om de lades van deze printer op te vragen.</value>
+  </data>
+  <data name="FROM" xml:space="preserve">
+    <value>Van</value>
+  </data>
+  <data name="DISABLEPRINTER" xml:space="preserve">
+    <value>Deactiveer printer</value>
+  </data>
+  <data name="EXIT" xml:space="preserve">
+    <value>Sluiten</value>
+  </data>
+  <data name="PAPER" xml:space="preserve">
+    <value>Papier</value>
+  </data>
+  <data name="LARGEICONS" xml:space="preserve">
+    <value>Grote pictogrammen</value>
+  </data>
+  <data name="CALLTOPRINTERSERVICEFAILEDCHECKYOURCONNECTION" xml:space="preserve">
+    <value>Aanroep printerserver mislukt. Controleer uw verbinding.</value>
+  </data>
+  <data name="MANAGETRAYSANDPAPERTYPES" xml:space="preserve">
+    <value>Beheren lades en papiertypes</value>
+  </data>
+  <data name="SELECTAPRINTERINTHELISTOFPRINTERSFIRST" xml:space="preserve">
+    <value>Selecteer een printer uit de lijst van printers.</value>
+  </data>
+  <data name="SUSPENDPRINTJOB" xml:space="preserve">
+    <value>Laat afdruktaak wachten</value>
+  </data>
+  <data name="TILE" xml:space="preserve">
+    <value>Tegels</value>
+  </data>
+  <data name="PRINTERNAME" xml:space="preserve">
+    <value>Printernaam</value>
+  </data>
+  <data name="MANAGEPRINTER1" xml:space="preserve">
+    <value>Beheer printer...</value>
+  </data>
+  <data name="ADDPRINTERTOPOOL" xml:space="preserve">
+    <value>Voeg printer toe aan groep</value>
+  </data>
+  <data name="REMOVEPRINTERFROMPOOL" xml:space="preserve">
+    <value>Verwijder printer uit groep</value>
+  </data>
+  <data name="PRINTJOBS" xml:space="preserve">
+    <value>Afdruktaken</value>
+  </data>
+  <data name="DISCARDJOB" xml:space="preserve">
+    <value>Annuleer taak</value>
+  </data>
+  <data name="ADDPRINTERSTOPOOL" xml:space="preserve">
+    <value>Voeg printer toe aan groep</value>
+  </data>
+  <data name="REMOVESELECTEDPRINTERFROMPOOL" xml:space="preserve">
+    <value>Verwijder printer uit groep</value>
+  </data>
+  <data name="SUSPENDSELECTEDPRINTJOB" xml:space="preserve">
+    <value>Laat afdruktaak wachten</value>
+  </data>
+  <data name="DISCARDSELECTEDPRINTJOB" xml:space="preserve">
+    <value>Annuleer afdruktaak</value>
+  </data>
+  <data name="VIEWSELECTEDPRINTJOB" xml:space="preserve">
+    <value>Bekijk afdruktaak</value>
+  </data>
+  <data name="MANAGEPRINTER" xml:space="preserve">
+    <value>Beheren</value>
+  </data>
+  <data name="ABOUT0" xml:space="preserve">
+    <value>Over {0}</value>
+  </data>
+  <data name="VERSION0" xml:space="preserve">
+    <value>Versie {0}</value>
+  </data>
+  <data name="CPYRIGHT" xml:space="preserve">
+    <value>Labelprint, het nummer één Windows softwareprogramma voor het afdrukken van barcodes en etiketten binnen uw bedrijf.  Labelprint geeft ondersteuning bij het gedistribueerd afdrukken.</value>
+  </data>
+  <data name="DESCRIPTION" xml:space="preserve">
+    <value>Beschrijving</value>
+  </data>
+  <data name="NO" xml:space="preserve">
+    <value>Nee</value>
+  </data>
+  <data name="OPTIONS" xml:space="preserve">
+    <value>Opties</value>
+  </data>
+  <data name="PRINTCOMMANDERMAINFORMTITLE" xml:space="preserve">
+    <value>Beheer etiketten afdrukken</value>
+  </data>
+  <data name="PRINTGROUPWILLBEREMOVED" xml:space="preserve">
+    <value>Bent u zeker dat u de printgroep wilt verwijderen?</value>
+  </data>
+  <data name="YES" xml:space="preserve">
+    <value>Ja</value>
+  </data>
+  <data name="GRAPHICALVIEW" xml:space="preserve">
+    <value>Voorbeeld</value>
+  </data>
+  <data name="XMLVIEW" xml:space="preserve">
+    <value>XML</value>
+  </data>
+  <data name="AVAILABLEITEMS" xml:space="preserve">
+    <value>Beschikbare velden:</value>
+  </data>
+  <data name="BARCODEFIELD" xml:space="preserve">
+    <value>Barcode</value>
+  </data>
+  <data name="CONCATFIELD" xml:space="preserve">
+    <value>Link Tekst</value>
+  </data>
+  <data name="CURRENTLABEL" xml:space="preserve">
+    <value>Huide label:</value>
+  </data>
+  <data name="FONTS" xml:space="preserve">
+    <value>Lettertypen</value>
+  </data>
+  <data name="IMAGEFIELD" xml:space="preserve">
+    <value>Afbeelding</value>
+  </data>
+  <data name="ITEMS" xml:space="preserve">
+    <value>Velden</value>
+  </data>
+  <data name="LABELDESIGNER" xml:space="preserve">
+    <value>Label Designer</value>
+  </data>
+  <data name="OPENPRINTJOB" xml:space="preserve">
+    <value>Open Afdruktaak</value>
+  </data>
+  <data name="PRINTPREVIEW" xml:space="preserve">
+    <value>Afdrukvoorbeeld</value>
+  </data>
+  <data name="SHOWBORDERS" xml:space="preserve">
+    <value>Laat randen zien</value>
+  </data>
+  <data name="TEXTFIELD" xml:space="preserve">
+    <value>Tekst</value>
+  </data>
+  <data name="USEDITEMS" xml:space="preserve">
+    <value>Gebruikte velden:</value>
+  </data>
+  <data name="LASTPRINTED" xml:space="preserve">
+    <value>Laatst geprint</value>
+  </data>
+  <data name="PRINTEDTO" xml:space="preserve">
+    <value>Geprint op</value>
+  </data>
+</root>

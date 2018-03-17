@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+	<system.runtime.remoting>
+    <customErrors mode="off"/>
+    <application name="ACALabelXClient">
+			<service>
+				<wellknown mode="Singleton" type="ACA.LabelX.Client.RemClientControlObject, ACALabelXClientRemControlObject" objectUri="ACALabelXClientRemControlObject" />   
+			</service>
+			<channels>
+        <channel address="@@clientremip@@" ref="http" port="@@clientremport@@">
+          <clientProviders>
+            <formatter ref="soap"/>
+          </clientProviders>
+        </channel>
+			</channels>
+		</application>
+	</system.runtime.remoting>
+</configuration>
+

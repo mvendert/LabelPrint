@@ -1,0 +1,397 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EC0DB481-248D-424A-A6C9-D70259852982}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LabelDesigner</RootNamespace>
+    <AssemblyName>LabelDesigner</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>labelprint.snk</AssemblyOriginatorKeyFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>ACALabelPrintDesign.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="lua51, Version=0.0.0.0, Culture=neutral, PublicKeyToken=1e1fb15b02227b8a, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lua51.dll</HintPath>
+    </Reference>
+    <Reference Include="LuaInterface, Version=2.2.0.0, Culture=neutral, PublicKeyToken=1e1fb15b02227b8a, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\LuaInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddBarcodeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddBarcodeForm.Designer.cs">
+      <DependentUpon>AddBarcodeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddConcatForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddConcatForm.Designer.cs">
+      <DependentUpon>AddConcatForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddImageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddImageForm.Designer.cs">
+      <DependentUpon>AddImageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddItemForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddItemForm.Designer.cs">
+      <DependentUpon>AddItemForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddTextFieldForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddTextFieldForm.Designer.cs">
+      <DependentUpon>AddTextFieldForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FormLabelDesignerEx.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLabelDesignerEx.Designer.cs">
+      <DependentUpon>FormLabelDesignerEx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCustomZoomFactor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCustomZoomFactor.Designer.cs">
+      <DependentUpon>FormCustomZoomFactor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LuaEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LuaEditor.Designer.cs">
+      <DependentUpon>LuaEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBase.Designer.cs">
+      <DependentUpon>FormBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InputBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InputBox.Designer.cs">
+      <DependentUpon>InputBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoadLabelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoadLabelForm.Designer.cs">
+      <DependentUpon>LoadLabelForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewLabelDefForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewLabelDefForm.Designer.cs">
+      <DependentUpon>NewLabelDefForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewPaperTypeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewPaperTypeForm.Designer.cs">
+      <DependentUpon>NewPaperTypeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddBarcodeForm.resx">
+      <DependentUpon>AddBarcodeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddConcatForm.resx">
+      <DependentUpon>AddConcatForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddImageForm.resx">
+      <DependentUpon>AddImageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddItemForm.resx">
+      <DependentUpon>AddItemForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddTextFieldForm.resx">
+      <DependentUpon>AddTextFieldForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomPictureBox.resx">
+      <DependentUpon>CustomPictureBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBase.resx">
+      <DependentUpon>FormBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCustomZoomFactor.resx">
+      <DependentUpon>FormCustomZoomFactor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLabelDesignerEx.resx">
+      <DependentUpon>FormLabelDesignerEx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InputBox.resx">
+      <DependentUpon>InputBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoadLabelForm.resx">
+      <DependentUpon>LoadLabelForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LuaEditor.resx">
+      <DependentUpon>LuaEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewLabelDefForm.resx">
+      <DependentUpon>NewLabelDefForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewPaperTypeForm.resx">
+      <DependentUpon>NewPaperTypeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RemoveForm.resx">
+      <DependentUpon>RemoveForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectListForm.resx">
+      <DependentUpon>SelectListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="strings.en.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>strings.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="strings.nl.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>strings.nl.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <EmbeddedResource Include="labelschema.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="paperschema.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="printjobschema.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
+    <None Include="labelprint.snk" />
+    <None Include="labelprint2011.snk" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox.Designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RemoveForm.Designer.cs">
+      <DependentUpon>RemoveForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectListForm.Designer.cs">
+      <DependentUpon>SelectListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="strings.en.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>strings.en.resx</DependentUpon>
+    </Compile>
+    <Compile Include="strings.nl.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>strings.nl.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ACALabelXToolbox\ACALabelXToolbox.csproj">
+      <Project>{FC2D9759-5F97-46B0-BC4F-919BDC8C9B22}</Project>
+      <Name>ACALabelXToolbox</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ACAPSLib\ACAPSLib.csproj">
+      <Project>{78616A19-A797-43B6-A71B-4E3C967391EC}</Project>
+      <Name>ACAPSLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LabelXPrintEngine\LabelXPrintEngine.csproj">
+      <Project>{E5C3232C-9503-4972-AF26-C43CBE3C03DF}</Project>
+      <Name>LabelXPrintEngine</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ACALabelPrintDesign.ico" />
+    <Content Include="arrow_down.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="arrow_left.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="arrow_right.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="arrow_up.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\text.png" />
+    <None Include="Resources\barcode2.png" />
+    <None Include="Resources\image.png" />
+    <None Include="Resources\linkedtext.png" />
+    <None Include="Resources\script.png" />
+    <None Include="Resources\fileopen.png" />
+    <None Include="Resources\exit.png" />
+    <None Include="Resources\about.png" />
+    <Content Include="Resources\write_config_128.ico" />
+    <Content Include="Resources\write_config_128.png" />
+    <Content Include="Resources\write_config_32.ico" />
+    <Content Include="Resources\write_config_48.ico" />
+    <Content Include="write_config_128.ico" />
+    <None Include="Resources\zoom_128.png" />
+    <None Include="Resources\rotate_128.png" />
+    <Content Include="SortDown.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SortUp.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
