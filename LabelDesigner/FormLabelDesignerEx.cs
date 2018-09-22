@@ -1855,6 +1855,20 @@ namespace LabelDesigner
                     xmlWriter.WriteStartElement("imagestyle");
                     xmlWriter.WriteAttributeString("style", tempImageField.Scale.ToString());
                     xmlWriter.WriteAttributeString("keepratio", tempImageField.KeepRatio.ToString().ToLower());
+
+                    //mve,autorotate
+                    if (tempImageField.AutoRotate == LabelDef.ImageField.AutoRotateStyle.AutoRotateClockwise)
+                    {
+                        xmlWriter.WriteAttributeString("autorotate", "clockwise");
+                    }
+                    else if (tempImageField.AutoRotate == LabelDef.ImageField.AutoRotateStyle.AutoRotateCounterClockwise)
+                    {
+                        xmlWriter.WriteAttributeString("autorotate", "counterclockwise");
+                    }
+                    else
+                        xmlWriter.WriteAttributeString("autorotate", "none");
+                    //*
+
                     xmlWriter.WriteAttributeString("colorstyle", tempImageField.Color.ToString());
                     xmlWriter.WriteEndElement(); //</imagestyle>                                                       
                     xmlWriter.WriteEndElement(); //</imagefield>

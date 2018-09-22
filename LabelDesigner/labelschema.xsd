@@ -104,6 +104,7 @@
                               <xs:attribute name="style" type="xs:string" use="required" />
                               <xs:attribute name="keepratio" type="xs:boolean" use="required" />
                               <xs:attribute name="colorstyle" type="xs:string" use="required" />
+                              <xs:attribute name="autorotate" type="xs:string" use="optional" />
                             </xs:complexType>
                           </xs:element>
                         </xs:sequence>

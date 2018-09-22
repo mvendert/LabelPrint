@@ -53,35 +53,9 @@ namespace ACA.LabelX.Controls
             this.keepratiocheck = new System.Windows.Forms.CheckBox();
             this.resizestylecombo = new System.Windows.Forms.ComboBox();
             this.rezisestylelbl = new System.Windows.Forms.Label();
+            this.autorotatecombo = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // xpostxt
-            // 
-            this.xpostxt.TabIndex = 0;
-            // 
-            // ypostxt
-            // 
-            this.ypostxt.TabIndex = 1;
-            // 
-            // rotationcombo
-            // 
-            this.rotationcombo.TabIndex = 2;
-            // 
-            // manualwhcheck
-            // 
-            this.manualwhcheck.TabIndex = 4;
-            // 
-            // heighttxt
-            // 
-            this.heighttxt.TabIndex = 6;
-            // 
-            // widthtxt
-            // 
-            this.widthtxt.TabIndex = 5;
-            // 
-            // referencecombo
-            // 
-            this.referencecombo.TabIndex = 3;
             // 
             // moveleftbtn
             // 
@@ -140,10 +114,31 @@ namespace ACA.LabelX.Controls
             this.rezisestylelbl.TabIndex = 36;
             this.rezisestylelbl.Text = "Resize style: ";
             // 
+            // autorotatecombo
+            // 
+            this.autorotatecombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.autorotatecombo.FormattingEnabled = true;
+            this.autorotatecombo.Location = new System.Drawing.Point(69, 239);
+            this.autorotatecombo.Name = "autorotatecombo";
+            this.autorotatecombo.Size = new System.Drawing.Size(109, 21);
+            this.autorotatecombo.TabIndex = 37;
+            this.autorotatecombo.SelectedIndexChanged += new System.EventHandler(this.autorotatecombo_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(4, 242);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(64, 13);
+            this.label1.TabIndex = 38;
+            this.label1.Text = "Auto Rotate";
+            // 
             // ImageFieldInfoControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.autorotatecombo);
             this.Controls.Add(this.greyscalecheck);
             this.Controls.Add(this.keepratiocheck);
             this.Controls.Add(this.resizestylecombo);
@@ -171,6 +166,8 @@ namespace ACA.LabelX.Controls
             this.Controls.SetChildIndex(this.resizestylecombo, 0);
             this.Controls.SetChildIndex(this.keepratiocheck, 0);
             this.Controls.SetChildIndex(this.greyscalecheck, 0);
+            this.Controls.SetChildIndex(this.autorotatecombo, 0);
+            this.Controls.SetChildIndex(this.label1, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -182,6 +179,8 @@ namespace ACA.LabelX.Controls
         private System.Windows.Forms.CheckBox keepratiocheck;
         private System.Windows.Forms.ComboBox resizestylecombo;
         private System.Windows.Forms.Label rezisestylelbl;
+        private System.Windows.Forms.ComboBox autorotatecombo;
+        private System.Windows.Forms.Label label1;
     }
 }
 /*

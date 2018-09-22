@@ -71,6 +71,8 @@ namespace LabelDesigner
             this.greyscalecheck = new System.Windows.Forms.CheckBox();
             this.valuelbl = new System.Windows.Forms.Label();
             this.valuetxt = new System.Windows.Forms.TextBox();
+            this.autorotatecombo = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // manualwhcheck
@@ -271,12 +273,32 @@ namespace LabelDesigner
             this.valuetxt.Size = new System.Drawing.Size(100, 20);
             this.valuetxt.TabIndex = 2;
             // 
+            // autorotatecombo
+            // 
+            this.autorotatecombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.autorotatecombo.FormattingEnabled = true;
+            this.autorotatecombo.Location = new System.Drawing.Point(259, 164);
+            this.autorotatecombo.Name = "autorotatecombo";
+            this.autorotatecombo.Size = new System.Drawing.Size(121, 21);
+            this.autorotatecombo.TabIndex = 34;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(189, 167);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(64, 13);
+            this.label1.TabIndex = 35;
+            this.label1.Text = "Auto Rotate";
+            // 
             // AddImageForm
             // 
             this.AcceptButton = this.Okbtn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 279);
+            this.ClientSize = new System.Drawing.Size(392, 279);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.autorotatecombo);
             this.Controls.Add(this.valuetxt);
             this.Controls.Add(this.valuelbl);
             this.Controls.Add(this.greyscalecheck);
@@ -335,6 +357,8 @@ namespace LabelDesigner
         private System.Windows.Forms.CheckBox greyscalecheck;
         private System.Windows.Forms.Label valuelbl;
         private System.Windows.Forms.TextBox valuetxt;
+        private System.Windows.Forms.ComboBox autorotatecombo;
+        private System.Windows.Forms.Label label1;
     }
 }
 /*

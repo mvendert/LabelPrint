@@ -135,6 +135,20 @@ namespace LabelDesigner
                 else
                     imagefield.ValueRef = referencecombo.SelectedItem.ToString();
 
+                //mve,autorotate
+                if (autorotatecombo.SelectedIndex == 0)
+                {
+                    Imagefield.AutoRotate = LabelDef.ImageField.AutoRotateStyle.NoAutoRotate;
+                }
+                else if (autorotatecombo.SelectedIndex == 1)
+                {
+                    Imagefield.AutoRotate = LabelDef.ImageField.AutoRotateStyle.AutoRotateClockwise;
+                }
+                else if (autorotatecombo.SelectedIndex == 2)
+                {
+                    Imagefield.AutoRotate = LabelDef.ImageField.AutoRotateStyle.AutoRotateCounterClockwise;
+                }           
+                //*
 
                 DialogResult = DialogResult.OK;
                 this.Close();

@@ -2285,6 +2285,10 @@ namespace ACA.LabelX.Label
             public ScaleStyle Scale = ScaleStyle.Normal;
             public ColorStyle Color = ColorStyle.Color;
             public bool KeepRatio = true;
+            //mve, autorotate
+            public enum AutoRotateStyle { NoAutoRotate, AutoRotateClockwise, AutoRotateCounterClockwise}
+            public AutoRotateStyle AutoRotate = AutoRotateStyle.NoAutoRotate;
+            //*
             public string PicturesRootFolder = String.Empty;
             public ImageField(Tools.CoordinateSystem coordinateSystem)
                 :base(coordinateSystem)
@@ -2298,6 +2302,9 @@ namespace ACA.LabelX.Label
                 Scale = ScaleStyle.Normal;
                 KeepRatio = true;
                 Color = ColorStyle.Color;
+                //mve, autorotate
+                AutoRotate = AutoRotateStyle.NoAutoRotate;
+                //*
 
                 foreach (XmlNode nodex in node.ChildNodes)
                 {
@@ -2316,6 +2323,17 @@ namespace ACA.LabelX.Label
                             {
                                 KeepRatio = attrib.Value.Equals("true", StringComparison.OrdinalIgnoreCase);
                             }
+                            // mve,autorotate
+                            else if (attrib.Name.Equals("autorotate", StringComparison.OrdinalIgnoreCase))
+                            {
+                                if (attrib.Value.Equals("none", StringComparison.OrdinalIgnoreCase))
+                                    AutoRotate = AutoRotateStyle.NoAutoRotate;
+                                else if (attrib.Value.Equals("clockwise", StringComparison.OrdinalIgnoreCase))
+                                    AutoRotate = AutoRotateStyle.AutoRotateClockwise;
+                                else if (attrib.Value.Equals("counterclockwise", StringComparison.OrdinalIgnoreCase))
+                                    AutoRotate = AutoRotateStyle.AutoRotateCounterClockwise;
+                            }
+                            //*
                             else if (attrib.Name.Equals("colorstyle", StringComparison.OrdinalIgnoreCase))
                             {
                                 if (attrib.Value.Equals("grayscale", StringComparison.OrdinalIgnoreCase))
@@ -2501,6 +2519,38 @@ namespace ACA.LabelX.Label
                             return base.Draw(Graph, Offset, "Er! W/H/Style");//GetString()
                         }
                     }
+
+                    //mve, autorotate
+                    if ( (AutoRotate != AutoRotateStyle.NoAutoRotate) &&
+                         (returnRectangle.Width != returnRectangle.Height) &&
+                         (theImage.Width != theImage.Height) )
+                    {
+                        bool bRectangleLandscape = false;
+                        bool bImageLandscape = false;
+                        if (returnRectangle.Width > returnRectangle.Height)
+                        {
+                            bRectangleLandscape = true;
+                        }
+                        if  (theImage.Width > theImage.Height)
+                        {
+                            bImageLandscape = true;
+                        }
+                        if (bRectangleLandscape != bImageLandscape)
+                        {
+                            //We need to rotate the image...
+
+                            switch (AutoRotate)
+                            {
+                                case AutoRotateStyle.AutoRotateClockwise:
+                                    theImage.RotateFlip(RotateFlipType.Rotate90FlipNone);
+                                    break;
+                                case AutoRotateStyle.AutoRotateCounterClockwise:
+                                    theImage.RotateFlip(RotateFlipType.Rotate270FlipNone);
+                                    break;
+                            }
+                        }
+                    }
+                    // *
 
                     switch (Scale)
                     {

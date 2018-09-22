@@ -40,6 +40,11 @@ namespace ACA.LabelX.Controls
             InitializeComponent();
             resizestylecombo.Items.AddRange(new String[] { "Normal", "Stretch" });
             resizestylecombo.SelectedIndex = 0;
+
+            //mve, autorotate
+            autorotatecombo.Items.AddRange(new string[] { "None", "Clockwise", "CounterClockwise" });
+            autorotatecombo.SelectedIndex = 0;
+            //*
             greyscalecheck.Checked = false;
             SetLanguage();
             EnableComponents();
@@ -52,15 +57,38 @@ namespace ACA.LabelX.Controls
             keepratiocheck.Text = GetString("KEEPRATIO");
             greyscalecheck.Text = GetString("GREYSCALE");
 
+            //mve,autorotate
             resizestylecombo.Items.Clear();
             resizestylecombo.Items.AddRange(new String[] { GetString("NORMAL"), GetString("STRETCH") });
             resizestylecombo.SelectedIndex = 0;
+            //*
+
+            //mve, autorotate
+            autorotatecombo.Items.Clear();
+            autorotatecombo.Items.AddRange(new string[] { GetString("NONE"), GetString("CLOCKWISE"), GetString("COUNTERCLOCKWISE") });
+            autorotatecombo.SelectedIndex = 0;
+            //*
 
         }
         public override void SetData()
         {
             imageField = (Label.LabelDef.ImageField)base.Field;
             resizestylecombo.SelectedItem = imageField.Scale.ToString();
+
+            //mve,autorotate
+            if (imageField.AutoRotate == LabelDef.ImageField.AutoRotateStyle.AutoRotateClockwise)
+            {
+                autorotatecombo.SelectedIndex = 1;
+            }
+            else if (imageField.AutoRotate == LabelDef.ImageField.AutoRotateStyle.AutoRotateCounterClockwise)
+            {
+                autorotatecombo.SelectedIndex = 2;
+            } else
+            {
+                autorotatecombo.SelectedIndex = 0;
+            }
+            // *
+                
             keepratiocheck.Checked = imageField.KeepRatio;
 
             if (imageField.Scale.ToString().Equals(GetString("NORMAL"), StringComparison.OrdinalIgnoreCase))
@@ -152,6 +180,25 @@ namespace ACA.LabelX.Controls
             FillData(imageField);
             mainForm.Invalidate();
         }
+
+        //mve,autorotate
+        private void autorotatecombo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LabelDef.ImageField.AutoRotateStyle style = LabelDef.ImageField.AutoRotateStyle.NoAutoRotate;
+            if (autorotatecombo.SelectedIndex == 0)
+                style = LabelDef.ImageField.AutoRotateStyle.NoAutoRotate;
+            else if (autorotatecombo.SelectedIndex == 1)
+                style = LabelDef.ImageField.AutoRotateStyle.AutoRotateClockwise;
+            else if (autorotatecombo.SelectedIndex == 2)
+                style = LabelDef.ImageField.AutoRotateStyle.AutoRotateCounterClockwise;
+            if (imageField != null)
+            {
+                FillData(imageField);
+                imageField.AutoRotate = style;
+            }
+            mainForm.Invalidate();
+        }
+        //*
     }
 }
 /*
