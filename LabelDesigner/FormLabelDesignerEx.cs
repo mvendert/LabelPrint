@@ -804,7 +804,11 @@ namespace LabelDesigner
         }
         private void addToUsedItemsListDictionaryWithoutPath(string value)
         {
-            string temp = removePath(value);
+            //Mve Toch met path
+            //string temp = removePath(value);
+            string temp;
+            temp = value;
+            //
             try
             {
                 useditemslistDictionary.Add(temp, value);

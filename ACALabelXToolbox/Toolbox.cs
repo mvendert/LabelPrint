@@ -846,8 +846,100 @@ namespace ACA.LabelX.Toolbox
             GetItemsFromFolder(FolderPath, ref items, PreFix, string.Empty);
         }
 
-        static public void GetPicturesFromFolderTree(string FolderPath, ref List<LabelX.Toolbox.LabelXItem> items)
+        static public void GetPicturesFromFolderTree(string FolderPath, ref List<LabelX.Toolbox.LabelXItem> items, ref List<FileSystemEventArgs> listPictureChanged)
         {
+            if (items.Count > 0 && listPictureChanged.Count > 0)
+            {
+                foreach(FileSystemEventArgs e in listPictureChanged)
+                {
+                    try
+                    {
+                        if (e.ChangeType == WatcherChangeTypes.Deleted)
+                        {
+                            //DELETED
+                            if (items.Exists(x => x.Name.Contains(e.FullPath)))
+                            {
+                                LabelXItem item = items.Find(x => x.Name.Contains(e.FullPath));
+                                items.Remove(item);
+                                GlobalDataStore.Logger.Debug("Picture DELETED: " + e.FullPath);
+                            }
+                        }
+                        else if (e.ChangeType == WatcherChangeTypes.Renamed)
+                        {
+                            //CREATED
+                            RenamedEventArgs ren = e as RenamedEventArgs;
+                            if (ren.OldFullPath.Contains(".{downloading}"))
+                            {
+                                LabelXItem item = new LabelXItem { Name = e.FullPath };
+                                try
+                                {
+                                    item.Hash = PSLib.FilesAndFolders.GetFileHash(e.FullPath);
+                                }
+                                catch { }
+
+                                items.Add(item);
+                                GlobalDataStore.Logger.Debug("Picture ADDED: " + e.FullPath);
+                            }
+                            else
+                            //RENAMED
+                            if (items.Exists(x => x.Name.Contains(ren.OldFullPath)))
+                            {
+                                int i = items.FindIndex(x => x.Name.Contains(ren.OldFullPath));
+                                LabelXItem item = items[i];
+                                item.Name = ren.FullPath;
+                                try
+                                {
+                                    item.Hash = PSLib.FilesAndFolders.GetFileHash(item.Name);
+                                } catch {}
+                                items[i] = item;
+                                GlobalDataStore.Logger.Debug("Picture RENAMED: " + e.FullPath);
+                            }
+                        }
+                        else if (e.ChangeType == WatcherChangeTypes.Changed)
+                        {
+                            //CHANGED
+                            if (items.Exists(x => x.Name.Contains(e.FullPath)))
+                            {
+                                int i = items.FindIndex(x => x.Name.Contains(e.FullPath));
+                                LabelXItem item = items[i];
+                                item.Name = e.FullPath;
+                                try
+                                {
+                                    item.Hash = PSLib.FilesAndFolders.GetFileHash(item.Name);
+                                } catch {}
+                                items[i] = item;
+                                GlobalDataStore.Logger.Debug("Picture CHANGED: " + e.FullPath);
+                            }
+                        }
+                        else if (e.ChangeType == WatcherChangeTypes.Created)
+                        {
+                            //CREATED
+                            LabelXItem item = new LabelXItem { Name = e.FullPath };
+                            try
+                            {
+                                item.Hash = PSLib.FilesAndFolders.GetFileHash(e.FullPath);
+                            }
+                            catch { }
+
+                            items.Add(item);
+                            GlobalDataStore.Logger.Debug("Picture ADDED: " + e.FullPath);
+                        }
+                    }
+                    catch
+                    {
+                    }
+                }
+
+                listPictureChanged.Clear();
+
+                return;
+            }
+
+            if (items.Count > 0)
+                return;
+
+            GlobalDataStore.Logger.Debug("Picture INIT");
+
             System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch();
             sw.Start();
             ArrayList directoryList = new ArrayList();

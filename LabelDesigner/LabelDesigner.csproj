@@ -308,6 +308,7 @@
     <Compile Include="SelectListForm.Designer.cs">
       <DependentUpon>SelectListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Settings.cs" />
     <Compile Include="strings.en.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

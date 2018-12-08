@@ -112,10 +112,10 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="ADJUSTMENT" xml:space="preserve">
     <value>Afstellen:</value>
@@ -129,8 +129,14 @@
   <data name="CHARACTERLIMIT" xml:space="preserve">
     <value>Maximum characters:</value>
   </data>
+  <data name="CLOCKWISE" xml:space="preserve">
+    <value>Met de klok mee</value>
+  </data>
   <data name="CONCATMETHOD" xml:space="preserve">
     <value>Link methode:</value>
+  </data>
+  <data name="COUNTERCLOCKWISE" xml:space="preserve">
+    <value>Tegen de klok in</value>
   </data>
   <data name="DATE" xml:space="preserve">
     <value>Datum</value>
@@ -200,6 +206,9 @@
   </data>
   <data name="MILLIMETER" xml:space="preserve">
     <value>Millimeter</value>
+  </data>
+  <data name="NONE" xml:space="preserve">
+    <value>Geen</value>
   </data>
   <data name="NORMAL" xml:space="preserve">
     <value>Normaal</value>

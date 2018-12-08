@@ -1274,7 +1274,7 @@ namespace ACA.Barcode
                 ZXing.Common.EncodingOptions Options = new ZXing.PDF417.PDF417EncodingOptions
                     //new ZXing.Common.EncodingOptions
                 {                   
-                    Dimensions = new ZXing.PDF417.Internal.Dimensions(8,8,30,40),
+                    Dimensions = new ZXing.PDF417.Internal.Dimensions(8,18,30,40),
                     ErrorCorrection = ZXing.PDF417.Internal.PDF417ErrorCorrectionLevel.L5,                    
                     Height = pixelHeight,
                     Width = pixelWidth,

@@ -31,7 +31,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Retailium Software Development BV")]
 [assembly: AssemblyProduct("AcaLabelPrint")]
-[assembly: AssemblyCopyright("Copyright ©2016 Retailium Software Development BV")]
+[assembly: AssemblyCopyright("Copyright ©2018 ACA Fashion Software BV")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -53,8 +53,8 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("2.8.5.0")]
-[assembly: AssemblyFileVersion("2.8.5.0")]
+[assembly: AssemblyVersion("2.8.8.0")]
+[assembly: AssemblyFileVersion("2.8.8.0")]
 /*
  AcaLabelPrint Copyright (C) 2011  Retailium Software Development BV.
  This program comes with ABSOLUTELY NO WARRANTY; 

@@ -2450,6 +2450,7 @@ namespace ACA.LabelX.Label
 
                     Bitmap helpBitmap;
                     helpBitmap = new Bitmap(tmpBitmap);
+                    helpBitmap.SetResolution(tmpBitmap.HorizontalResolution, tmpBitmap.VerticalResolution);
                     tmpBitmap.Dispose();
 
                     Image theImage;
@@ -2507,6 +2508,16 @@ namespace ACA.LabelX.Label
                             Graph.FillRegion(Brushes.Blue, Graph.Clip);
                         }
                         returnRectangle = imgRectangle;
+                    } else
+                    {
+                        if (AutoRotate != AutoRotateStyle.NoAutoRotate)
+                        {
+                            //no scaling, width = null and height=null
+                            widthInPixels = theImage.Width;
+                            heightInPixels = theImage.Height;
+                            imgRectangle = new Rectangle(X, Y, widthInPixels, heightInPixels);
+                            returnRectangle = Rectangle.Round( r.GetBounds(Graph));                            
+                        }
                     }
 
                     if ((Width == null) || (Height == null) || (Width.length == 0) || (Height.length == 0))

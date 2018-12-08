@@ -32,6 +32,7 @@ using System.Runtime.Remoting;
 using System.Collections;
 using ACA.LabelX.Client;
 using ACA.LabelX.Toolbox;
+using System.Threading;
 
 namespace ACA.LabelX.ClientEngine
 {
@@ -61,6 +62,7 @@ namespace ACA.LabelX.ClientEngine
         public string MachineName = "";
         public string ServerURL = "";
         public bool imgFolderChanged = true;
+        public bool updateInit = false;
         public bool updFolderChanged = true;
         public List<LabelX.Toolbox.PrintGroupItem> PrintGroups;
         public int PollFrequency = 60 * 10; // 10 minutes
@@ -296,7 +298,9 @@ namespace ACA.LabelX.ClientEngine
             string GeneralPictureName = ServerPictureName.Replace(remotePicturesFolder, "");
             string LocalPictureName = localPicturesFolder + GeneralPictureName;
 
-            Directory.CreateDirectory(Path.GetDirectoryName(LocalPictureName));
+            string dir = Path.GetDirectoryName(LocalPictureName);
+            if (!Directory.Exists(dir))
+                Directory.CreateDirectory(dir);
 
             int DataLength = 0;
             byte[] Data = GetRemotePicture(ServerPictureName, ref DataLength);
@@ -401,20 +405,32 @@ namespace ACA.LabelX.ClientEngine
             ExtractItemsFromXML(ConvertXMLtoByte(UpdateRootFolder, "Updates.xml"), items, "");
         }
 
+        public List<FileSystemEventArgs> listPictureChanged = new List<FileSystemEventArgs>();
+        public readonly object _object = new object();
+
         private void GetLocalPictureItems(ICollection<LabelXItem> items, out string LocalPicturesFolder)
         {
+            Monitor.Enter(_object);
+
             GlobalDataStore.Logger.Debug("GetLocalPictureItems started.");
             LocalPicturesFolder = PicturesRootFolder;
             if (imgFolderChanged || !(System.IO.File.Exists(LocalPicturesFolder + "Pictures.xml")))
             {
                 GlobalDataStore.Logger.Debug("Something changed. Creating new XML file for pictures.");
-                WritePictureXMLFile();
+                
+                List<FileSystemEventArgs> listPictureChangedTmp = new List<FileSystemEventArgs>(listPictureChanged);
+                listPictureChanged.Clear();
+
+                WritePictureXMLFile(listPictureChangedTmp, updateInit);
+                updateInit = false;
                 imgFolderChanged = false;
             }
 
             GlobalDataStore.Logger.Debug("Creating itemlist for xml file.");
             ExtractItemsFromXML(ConvertXMLtoByte(PicturesRootFolder, "Pictures.xml"), items, "");
             GlobalDataStore.Logger.Debug(string.Format("GetLocalPictureItems returned items.count {0}", items.Count));
+
+            Monitor.Exit(_object);
         }
 
         public byte[] ConvertXMLtoByte(string location, string xmlFile)
@@ -436,12 +452,18 @@ namespace ACA.LabelX.ClientEngine
 
         }
 
-        public void WritePictureXMLFile()
+        private List<LabelX.Toolbox.LabelXItem> items = new List<LabelX.Toolbox.LabelXItem>();
+
+        public void WritePictureXMLFile(List<FileSystemEventArgs> listPictureChanged, bool init = false)
         {
             GlobalDataStore.Logger.Debug("Updating Pictures.xml ...");
-            List<LabelX.Toolbox.LabelXItem> items = new List<LabelX.Toolbox.LabelXItem>();
+
+            if (init)
+                items = new List<LabelX.Toolbox.LabelXItem>();
+
+            //List<LabelX.Toolbox.LabelXItem> items = new List<LabelX.Toolbox.LabelXItem>();
             DirectoryInfo PicturesRootFolderDirectoryInfo = new DirectoryInfo(PicturesRootFolder);
-            LabelX.Toolbox.Toolbox.GetPicturesFromFolderTree(PicturesRootFolderDirectoryInfo.FullName, ref items);
+            LabelX.Toolbox.Toolbox.GetPicturesFromFolderTree(PicturesRootFolderDirectoryInfo.FullName, ref items, ref listPictureChanged);
 
             //items = alle ingelezen pictures. Nu gaan wegschrijven.
             System.Xml.XmlDocument doc = new System.Xml.XmlDocument();
@@ -466,6 +488,8 @@ namespace ACA.LabelX.ClientEngine
 
 
             tw.Close();
+
+            GlobalDataStore.Logger.Debug("Updating Pictures.xml. Done.");
         }
 
         private static string getFileExt(string filePath)
@@ -777,7 +801,9 @@ namespace ACA.LabelX.ClientEngine
         public void SynchronizePictures()
         {
             EnsureStartIsCalled();
-            Directory.CreateDirectory(PicturesRootFolder);
+            if (!Directory.Exists(PicturesRootFolder))
+                Directory.CreateDirectory(PicturesRootFolder);
+
             string RemotePicturesFolder;
             string LocalPicturesFolder;
 

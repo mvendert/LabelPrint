@@ -27,6 +27,7 @@ using System.Net;
 using System.IO;
 using System.Text.RegularExpressions;
 using System.Threading;
+using System.Collections.Generic;
 
 namespace ACA.LabelX.Managers
 {
@@ -36,6 +37,7 @@ namespace ACA.LabelX.Managers
         private static string updateNodig = "";
         private static bool moetinfoverzenden = true;
         private static ACALabelXClientEngine clientEngine;
+
         //public LabelXClientServerManager()
         //{
 
@@ -256,6 +258,8 @@ namespace ACA.LabelX.Managers
             GlobalDataStore.Logger.Debug("Change detected in Update Folder. Will rebuild XML.");
         }
 
+        
+
         private static void onImgChanged(object sender, FileSystemEventArgs e)
         {
             string strFileExt = getFileExt(e.FullPath);
@@ -269,8 +273,33 @@ namespace ACA.LabelX.Managers
 
             if ((Regex.IsMatch(strFileExt, @"(.*\.jpg)|(.*\.jpeg)|(.*\.bmp)|(.*\.png)", RegexOptions.IgnoreCase)) | isDirectory)                
             {
+                if (isDirectory)
+                {
+                    //if (e.ChangeType != WatcherChangeTypes.Changed)
+                    //    clientEngine.updateInit = true;
+                }
+                else
+                {
+                    Monitor.Enter(clientEngine._object);
+                    clientEngine.listPictureChanged.Add(e);
+                    Monitor.Exit(clientEngine._object);
+                }
+
+                Monitor.Enter(clientEngine._object);
                 clientEngine.imgFolderChanged = true;
-                GlobalDataStore.Logger.Debug("Change detected in Image Folder. Will rebuild XML.");
+                Monitor.Exit(clientEngine._object);
+
+                GlobalDataStore.Logger.Debug(string.Format("Picture directory change: {0}, {1}", e.ChangeType.ToString(), e.FullPath));
+            }
+            else if (e.ChangeType == WatcherChangeTypes.Deleted)
+            {
+                //Een onbekende file of een directory zijn verwijderd !?
+                Monitor.Enter(clientEngine._object);
+                clientEngine.updateInit = true;
+                Monitor.Exit(clientEngine._object);
+
+                string fmt = string.Format("Picture directory delete: Deleted, {0}", e.FullPath);
+                GlobalDataStore.Logger.Debug(fmt);
             }
         }
 

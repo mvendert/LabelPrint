@@ -40,6 +40,7 @@ namespace ACA.LabelX.Managers
         string PicturesRootFolder = "";
         string UpdateRootFolder = "";
         private bool updatePictures = true;
+        private bool updateInit = false;
         private bool updateUpdates = true;
         readonly System.Timers.Timer timer = new System.Timers.Timer();
 
@@ -153,23 +154,66 @@ namespace ACA.LabelX.Managers
             return bRet;
         }
 
+
+        private List<FileSystemEventArgs> listPictureChanged = new List<FileSystemEventArgs>();
+        private readonly object _object = new object();
+
         private void onPictureChanged(object sender, FileSystemEventArgs e)
         {
             string strFileExt = getFileExt(e.FullPath);
             bool isDirectory = false;
 
+            Monitor.Enter(_object);
             updatePictures = true;
+            Monitor.Exit(_object);
+
             try
             {
                 isDirectory = (File.GetAttributes(e.FullPath) & FileAttributes.Directory) == FileAttributes.Directory;
             }
             catch {}
-                       
-            if ((Regex.IsMatch(strFileExt, @"(.*\.jpg)|(.*\.jpeg)|(.*\.bmp)|(.*\.png)", RegexOptions.IgnoreCase)) | isDirectory)            
+
+            if ((Regex.IsMatch(strFileExt, @"(.*\.jpg)|(.*\.jpeg)|(.*\.bmp)|(.*\.png)", RegexOptions.IgnoreCase)) | isDirectory)
             {
-                updateTimer = 10;
-                timer.Start();
-                GlobalDataStore.Logger.Debug("Change detected in Picture directory. Updating XML Timer");   
+                if (isDirectory)
+                {
+                    if (e.ChangeType == WatcherChangeTypes.Changed)
+                        return;
+
+                    Monitor.Enter(_object);
+                    updateInit = true;
+                    Monitor.Exit(_object);
+                }
+                else
+                {
+                    Monitor.Enter(_object);
+                    listPictureChanged.Add(e);
+                    Monitor.Exit(_object);
+                }
+
+                if (updateTimer == 0)
+                {
+                    updateTimer = 10;
+                    timer.Start();
+                }
+
+                GlobalDataStore.Logger.Debug(string.Format("Picture directory change: {0}, {1}", e.ChangeType.ToString(), e.FullPath));
+            }
+            else if (e.ChangeType == WatcherChangeTypes.Deleted)
+            {
+                //Een onbekende file of een directory zijn verwijderd !?
+                Monitor.Enter(_object);
+                updateInit = true;
+                Monitor.Exit(_object);
+
+                if (updateTimer == 0)
+                {
+                    updateTimer = 10;
+                    timer.Start();
+                }
+
+                string fmt = string.Format("Picture directory delete: Deleted, {0}", e.FullPath);
+                GlobalDataStore.Logger.Debug(fmt);
             }
         }
 
@@ -189,15 +233,22 @@ namespace ACA.LabelX.Managers
         private void timer_Tick(object sender, System.Timers.ElapsedEventArgs e)
         {
             updateTimer--;
+            GlobalDataStore.Logger.Debug(string.Format("updateTimer: {0}", updateTimer));
+
             if (updateTimer == 0)
             {
                 timer.Stop();
-
                 if (updatePictures)
                 {
-                    WritePictureXMLFile();
+                    Monitor.Enter(_object);
+                    List<FileSystemEventArgs> listPictureChangedTmp = new List<FileSystemEventArgs>(listPictureChanged);
+                    listPictureChanged.Clear();
+
+                    WritePictureXMLFile(listPictureChangedTmp, updateInit);
+                    updateInit = false;
                     GlobalDataStore.Logger.Debug("Updated Pictures.xml");
                     updatePictures = false;
+                    Monitor.Exit(_object);
                 }
 
                 if (updateUpdates)
@@ -248,12 +299,20 @@ namespace ACA.LabelX.Managers
             sw.Reset();
         }
 
-        public void WritePictureXMLFile()
+        private List<LabelX.Toolbox.LabelXItem> items = new List<LabelX.Toolbox.LabelXItem>();
+
+        public void WritePictureXMLFile(List<FileSystemEventArgs> listPictureChanged, bool init=false)
         {
             GlobalDataStore.Logger.Debug("Updating Pictures.xml ...");
-            List<LabelX.Toolbox.LabelXItem> items = new List<LabelX.Toolbox.LabelXItem>();
+
+            if (init)
+                items = new List<LabelX.Toolbox.LabelXItem>();
+
+            //if (listPictureChanged.Count == 0)
+            //    items = new List<LabelX.Toolbox.LabelXItem>();
+
             DirectoryInfo PicturesRootFolderDirectoryInfo = new DirectoryInfo(PicturesRootFolder);
-            LabelX.Toolbox.Toolbox.GetPicturesFromFolderTree(PicturesRootFolderDirectoryInfo.FullName, ref items);
+            LabelX.Toolbox.Toolbox.GetPicturesFromFolderTree(PicturesRootFolderDirectoryInfo.FullName, ref items, ref listPictureChanged);
 
             //items = alle ingelezen pictures. Nu gaan wegschrijven.
             System.Xml.XmlDocument doc = new System.Xml.XmlDocument();
@@ -275,9 +334,9 @@ namespace ACA.LabelX.Managers
             tw.Formatting = System.Xml.Formatting.Indented;
             doc.WriteContentTo(tw);
             doc.Save(PicturesRootFolder + "pictures.xml");
-
-
             tw.Close();
+
+            GlobalDataStore.Logger.Debug("Updating Pictures.xml. Done.");
         }
 
         private static string getFileExt(string filePath)

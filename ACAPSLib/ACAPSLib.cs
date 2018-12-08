@@ -95,7 +95,18 @@ namespace ACA.PSLib
                 }
                 infile.Close();
 
+#if DEBUG
+                string hash = CRC.GetMd5Sum(buffer);
+
+                if (FilePath.Contains("Pictures"))
+                    System.Diagnostics.Trace.TraceInformation("Hash: " + hash);
+
+                return hash;
+#else
                 return CRC.GetMd5Sum(buffer);
+#endif
+
+
             }
             catch (System.OutOfMemoryException e)
             {

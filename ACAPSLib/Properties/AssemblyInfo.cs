@@ -32,7 +32,7 @@ using System.Security;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Retailium Software Development BV")]
 [assembly: AssemblyProduct("AcaLabelPrint")]
-[assembly: AssemblyCopyright("Copyright © 2017 ACA Fashion Software BV")]
+[assembly: AssemblyCopyright("Copyright © 2018 ACA Fashion Software BV")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -53,8 +53,8 @@ using System.Security;
 //
 // You can specify all the values or you can default the Revision and Build Numbers 
 // by using the '*' as shown below:
-[assembly: AssemblyVersion("2.8.5.0")]
-[assembly: AssemblyFileVersion("2.8.5.0")]
+[assembly: AssemblyVersion("2.8.8.0")]
+[assembly: AssemblyFileVersion("2.8.8.0")]
 [assembly: AllowPartiallyTrustedCallers]
 
 /*
