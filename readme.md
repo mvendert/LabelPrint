@@ -1,4 +1,4 @@
-LabelPrint: A label printing sollution, with the ability to print barcodes.
+** LabelPrint **: A label printing sollution, with the ability to print barcodes.
 
 Print labels including barcodes on a dedicated printer, from an XML file containing the data.
 Desing a label graphically, storing the desingn in an XML file.
