@@ -5,11 +5,33 @@ Desing a label graphically, storing the desingn in an XML file.
 
 Supported barcodes include **EAN13, EAN8, 2OF5 Interlevaced**, and others.
 
+**Elements of Labelprint**
 
-We use this software in a production environment and have created an installation with installshield. This project
-is not supplied on sourceforge!
+- A (basic) graphical designer for designing your labels against a sample XML data file.
+- A client/server distribution system where printjobs are distributed to clients over the internet
+- A printqueue client for observing incomming printjobs and reprinting when needed
+- Bacode support for multiple types of barcodes
+- Distribution of images to the clients for the server. Printjobs will be sheduled for printing when all needed images have arived at the client.
+- Distribution of XML printjobs to the right clients
 
-When you want to use this software YOU will have to create your own installer.
+**Software components
+
+- A client service, A server service for production
+- A console client en server for debugging purposes
+- A printqueue manager
+- A label designer saving the design in XML format.
+
+**XML Components
+
+- A printjob
+- A Label defintiion
+- A pater definition
+- A client overview
+
+**Remarks
+
+We use this software in a production environment and have created an installation with installshield. 
+This installation piece of the project is not supplied as opensource. When you want to use this software YOU will have to create your own installer.
 
 To be able to run this project successfully, you will need to perform several steps. The most importand are shown below.
 But in short, you will need to addapt several .xml and .config configuration files if your directory structure is not 
@@ -27,7 +49,7 @@ Below is a description of the installationprocedure you will need to create.
 It you create an installation procedure in an opensource installer and you send it to me, this will be added to this project.
 This is currently not in my scope as I have a working installshield procedure.
 
-Steps to install everything on your system:
+###Steps to install everything on your system:
 
 1.	Look at the CopyLabelprintToCandiates.cmd solution item. It copies all files needed to a directory structure, needed for distribution. This will copy all needed  dll’s and exe’s.
 
