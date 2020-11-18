@@ -14,21 +14,21 @@ Supported barcodes include **EAN13, EAN8, 2OF5 Interlevaced**, and others.
 - Distribution of images to the clients for the server. Printjobs will be sheduled for printing when all needed images have arived at the client.
 - Distribution of XML printjobs to the right clients
 
-**Software components
+**Software components**
 
 - A client service, A server service for production
 - A console client en server for debugging purposes
 - A printqueue manager
 - A label designer saving the design in XML format.
 
-**XML Components
+**XML Components**
 
 - A printjob
 - A Label defintiion
 - A pater definition
 - A client overview
 
-**Remarks
+**Remarks**
 
 We use this software in a production environment and have created an installation with installshield. 
 This installation piece of the project is not supplied as opensource. When you want to use this software YOU will have to create your own installer.
