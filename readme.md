@@ -1,9 +1,9 @@
-** LabelPrint **: A label printing sollution, with the ability to print barcodes.
+# LabelPrint : A label printing sollution, with the ability to print barcodes.
 
 Print labels including barcodes on a dedicated printer, from an XML file containing the data.
 Desing a label graphically, storing the desingn in an XML file.
 
-Supported barcodes include EAN13, EAN8, 2OF5 Interlevaced, and others.
+Supported barcodes include **EAN13, EAN8, 2OF5 Interlevaced**, and others.
 
 
 We use this software in a production environment and have created an installation with installshield. This project
